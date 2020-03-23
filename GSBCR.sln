@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSBCR.UCTEST", "GSBCR.UCTES
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSBCR.UI", "GSBCR.UI\GSBCR.UI.csproj", "{067A2D92-A65F-4994-BDC5-A3406A6C53D7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{5236C1AA-0EAA-4707-8C59-7A703898E60B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
