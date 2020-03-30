@@ -71,6 +71,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmListeMedicaments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListeMedicaments.Designer.cs">
+      <DependentUpon>FrmListeMedicaments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListePraticiens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListePraticiens.Designer.cs">
+      <DependentUpon>FrmListePraticiens.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMenuVisiteur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,8 +101,19 @@
     <Compile Include="FrmSaisir.designer.cs">
       <DependentUpon>FrmSaisir.cs</DependentUpon>
     </Compile>
+    <Compile Include="gsb_visite_groupe1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>gsb_visite_groupe1DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmListeMedicaments.resx">
+      <DependentUpon>FrmListeMedicaments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListePraticiens.resx">
+      <DependentUpon>FrmListePraticiens.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuVisiteur.resx">
       <DependentUpon>FrmMenuVisiteur.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +134,17 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="gsb_visite_groupe1DataSet.xsc">
+      <DependentUpon>gsb_visite_groupe1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="gsb_visite_groupe1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>gsb_visite_groupe1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="gsb_visite_groupe1DataSet.xss">
+      <DependentUpon>gsb_visite_groupe1DataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\DataSources\GSBCR.BLL.Manager.datasource" />
     <None Include="Properties\DataSources\GSBCR.DC.RapportVisite.datasource" />
     <None Include="Properties\DataSources\GSBCR.modele.RAPPORT_VISITE.datasource" />
@@ -147,6 +181,10 @@
     <ProjectReference Include="..\GSBCR.modele\GSBCR.modele.csproj">
       <Project>{9ac7b58e-1c39-4ad5-96d3-8827b8038331}</Project>
       <Name>GSBCR.modele</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GSBCR.UC\GSBCR.UC.csproj">
+      <Project>{56877F95-43A4-4912-9110-C15F13939DA8}</Project>
+      <Name>GSBCR.UC</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

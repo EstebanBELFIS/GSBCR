@@ -50,9 +50,9 @@
             this.monSecteurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionÉquipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statistiquesSecteurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nouveauVisiteurDéléguéToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.nouveauVisiteurDéléguéToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -153,12 +153,14 @@
             this.lesMedicamentsToolStripMenuItem.Name = "lesMedicamentsToolStripMenuItem";
             this.lesMedicamentsToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.lesMedicamentsToolStripMenuItem.Text = "Les medicaments";
+            this.lesMedicamentsToolStripMenuItem.Click += new System.EventHandler(this.lesMedicamentsToolStripMenuItem_Click);
             // 
             // lesPraticiensToolStripMenuItem
             // 
             this.lesPraticiensToolStripMenuItem.Name = "lesPraticiensToolStripMenuItem";
             this.lesPraticiensToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.lesPraticiensToolStripMenuItem.Text = "Les praticiens";
+            this.lesPraticiensToolStripMenuItem.Click += new System.EventHandler(this.lesPraticiensToolStripMenuItem_Click);
             // 
             // mesDonnéesPersonnellesToolStripMenuItem
             // 
@@ -226,6 +228,12 @@
             this.statistiquesSecteurToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.statistiquesSecteurToolStripMenuItem.Text = "Statistiques secteur";
             // 
+            // nouveauVisiteurDéléguéToolStripMenuItem
+            // 
+            this.nouveauVisiteurDéléguéToolStripMenuItem.Name = "nouveauVisiteurDéléguéToolStripMenuItem";
+            this.nouveauVisiteurDéléguéToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.nouveauVisiteurDéléguéToolStripMenuItem.Text = "Nouveau visiteur / délégué";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -241,12 +249,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(8, 8);
             this.panel1.TabIndex = 9;
-            // 
-            // nouveauVisiteurDéléguéToolStripMenuItem
-            // 
-            this.nouveauVisiteurDéléguéToolStripMenuItem.Name = "nouveauVisiteurDéléguéToolStripMenuItem";
-            this.nouveauVisiteurDéléguéToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
-            this.nouveauVisiteurDéléguéToolStripMenuItem.Text = "Nouveau visiteur / délégué";
             // 
             // FrmMenuVisiteur
             // 
