@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29905.134
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1062
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSBCR.BLL", "GSBCR.BLL\GSBCR.BLL.csproj", "{87304D8D-BE1E-436A-9223-6D9F51178F9F}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSBCR.UI", "GSBCR.UI\GSBCR.UI.csproj", "{067A2D92-A65F-4994-BDC5-A3406A6C53D7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{5236C1AA-0EAA-4707-8C59-7A703898E60B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestGSBCR", "UnitTestProject1\UnitTestGSBCR.csproj", "{61495274-C350-488A-909D-55F7442F003D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,14 @@ Global
 		{067A2D92-A65F-4994-BDC5-A3406A6C53D7}.Release|Any CPU.ActiveCfg = Release|x86
 		{067A2D92-A65F-4994-BDC5-A3406A6C53D7}.Release|x86.ActiveCfg = Release|x86
 		{067A2D92-A65F-4994-BDC5-A3406A6C53D7}.Release|x86.Build.0 = Release|x86
+		{61495274-C350-488A-909D-55F7442F003D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61495274-C350-488A-909D-55F7442F003D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61495274-C350-488A-909D-55F7442F003D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{61495274-C350-488A-909D-55F7442F003D}.Debug|x86.Build.0 = Debug|Any CPU
+		{61495274-C350-488A-909D-55F7442F003D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61495274-C350-488A-909D-55F7442F003D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61495274-C350-488A-909D-55F7442F003D}.Release|x86.ActiveCfg = Release|Any CPU
+		{61495274-C350-488A-909D-55F7442F003D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
