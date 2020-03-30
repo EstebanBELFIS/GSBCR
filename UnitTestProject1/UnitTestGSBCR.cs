@@ -32,5 +32,19 @@ namespace UnitTestProject1
             }
 
         }
+        [TestMethod]
+        public void TestChargerRapportVisiteurFinis()
+        {
+            bool ok = false;
+            List<RAPPORT_VISITE> lr = VisiteurManager.ChargerRapportVisiteurFinis("a131");
+            foreach (RAPPORT_VISITE r in lr)
+            {
+                Assert.AreEqual("a131", r.RAP_MATRICULE, "le rapport n''appartient pas au matricule a131");
+                ok = (r.RAP_ETAT == "2" || r.RAP_ETAT == "3");
+                Assert.IsTrue(ok, "n° de rap etat pas équal à 2 ou 3");
+                ok = (r.RAP_NUM >= 3 && r.RAP_NUM <= 50);
+                Assert.IsTrue(ok, "n° de rapport faux");
+            }
+        }
     }
 }
