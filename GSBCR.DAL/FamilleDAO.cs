@@ -13,15 +13,30 @@ namespace GSBCR.DAL
     {
         public FAMILLE FindById(string code)
         {
-            //A faire : rechercher une famille de médicaments par son nom
-            return null;
+            FAMILLE code_famille = null;
+            using (var context = new GSB_VisiteEntities())
+            {
+                var req = from f in context.FAMILLEs
+                          where f.FAM_CODE == code
+                          select f;
+                code_famille = (FAMILLE)req;
+            }
+
+            return code_famille;
         }
 
         public List<FAMILLE> FindAll()
         {
-            //A faire : charger toutes les familles de médicaments
-            return null;
+            List<FAMILLE> fams = null;
+            using (var context = new GSB_VisiteEntities())
+            {
+                //désactiver le chargement différé
+                //context.Configuration.LazyLoadingEnabled = false;
+                var req = from f in context.FAMILLEs
+                          select f;
+                fams = req.ToList<FAMILLE>();
+            }
+            return fams;
         }
-
     }
 }
