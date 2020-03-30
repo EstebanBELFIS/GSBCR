@@ -21,8 +21,12 @@ namespace GSBCR.test
                 Console.WriteLine("3. modifier un rapport");
                 Console.WriteLine("4. charger les visiteurs d'une région");
                 Console.WriteLine("5. charger un visiteur");
-                Console.WriteLine("6. Quitter");
+                Console.WriteLine("6. charger les rapports non consultés des visiteurs d'une région");
+                Console.WriteLine("7. charger les rapports consultés des visiteurs d'une région");
+                Console.WriteLine("8. charger les rapports terminés du visiteur"); //ChargerRapportVisiteurFinis
+                Console.WriteLine("9. Quitter");
                 Console.WriteLine("Votre choix");
+                
                 n = Convert.ToInt16(Console.ReadLine());
                 switch (n)
                 {
@@ -36,7 +40,13 @@ namespace GSBCR.test
                         break;
                     case 5: test_ChargerVisiteur();
                         break;
-                    case 6: Console.WriteLine("Fin du test");
+                    case 6: test_ChargerRapportNonConsultésVisiteursRegion();
+                        break;
+                    case 7: test_ChargerRapportConsultésVisiteursRegion();
+                        break;
+                    case 8: test_ChargerRapportVisiteurFinis();
+                        break;
+                    case 9: Console.WriteLine("Fin du test");
                         break;
                     default: Console.WriteLine("Mauvais choix");
                         break;
@@ -44,6 +54,60 @@ namespace GSBCR.test
             } while (n != 6);
             
             Console.ReadKey();
+        }
+
+        static void test_ChargerRapportVisiteurFinis()
+        {
+            Console.WriteLine("Entrez le matricule visiteur :");
+            string mv = Console.ReadLine();
+            try
+            {
+                List<RAPPORT_VISITE> lesRapportsFinis = VisiteurManager.ChargerRapportVisiteurFinis(mv);
+                foreach (var r in lesRapportsFinis)
+                {
+                    Console.WriteLine("matricule {0}, n° rapport {1}", r.RAP_MATRICULE, r.RAP_NUM);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.GetBaseException().Message);
+            }
+        }
+
+        static void test_ChargerRapportNonConsultésVisiteursRegion()
+        {
+            Console.WriteLine("Entrez le code région :");
+            string cr = Console.ReadLine();
+            try
+            {
+                List<RAPPORT_VISITE> lesRapportsNonConsultes = DelegueManager.ChargerRapportRegionNonLus(cr);
+                foreach (var r in lesRapportsNonConsultes)
+                {
+                    Console.WriteLine("matricule {0}, n° rapport {1}", r.RAP_MATRICULE, r.RAP_NUM);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.GetBaseException().Message);
+            }
+        }
+
+        static void test_ChargerRapportConsultésVisiteursRegion()
+        {
+            Console.WriteLine("Entrez le code région :");
+            string cr = Console.ReadLine();
+            try
+            {
+                List<RAPPORT_VISITE> lesRapportsConsultes = DelegueManager.ChargerRapportRegionLus(cr);
+                foreach (var r in lesRapportsConsultes)
+                {
+                    Console.WriteLine("matricule {0}, n° rapport {1}", r.RAP_MATRICULE, r.RAP_NUM);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.GetBaseException().Message);
+            }
         }
 
         static void test_ChargerRapportVisiteurEnCours()
