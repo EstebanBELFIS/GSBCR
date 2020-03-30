@@ -44,12 +44,14 @@
             this.txtVille = new System.Windows.Forms.TextBox();
             this.txtCoef = new System.Windows.Forms.TextBox();
             this.txtFonction = new System.Windows.Forms.TextBox();
+            this.txtCode = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 45);
+            this.label1.Location = new System.Drawing.Point(240, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 0;
@@ -67,7 +69,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 148);
+            this.label3.Location = new System.Drawing.Point(31, 168);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 2;
@@ -86,7 +88,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(31, 249);
+            this.label5.Location = new System.Drawing.Point(31, 239);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(26, 13);
             this.label5.TabIndex = 4;
@@ -95,7 +97,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(31, 297);
+            this.label6.Location = new System.Drawing.Point(31, 278);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 13);
             this.label6.TabIndex = 5;
@@ -104,7 +106,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(255, 45);
+            this.label7.Location = new System.Drawing.Point(31, 134);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 13);
             this.label7.TabIndex = 6;
@@ -112,7 +114,7 @@
             // 
             // txtNom
             // 
-            this.txtNom.Location = new System.Drawing.Point(112, 45);
+            this.txtNom.Location = new System.Drawing.Point(298, 97);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(122, 20);
             this.txtNom.TabIndex = 7;
@@ -131,9 +133,9 @@
             // 
             // txtAddr
             // 
-            this.txtAddr.Location = new System.Drawing.Point(112, 148);
+            this.txtAddr.Location = new System.Drawing.Point(112, 165);
             this.txtAddr.Name = "txtAddr";
-            this.txtAddr.Size = new System.Drawing.Size(191, 20);
+            this.txtAddr.Size = new System.Drawing.Size(122, 20);
             this.txtAddr.TabIndex = 10;
             // 
             // txtCP
@@ -145,29 +147,47 @@
             // 
             // txtVille
             // 
-            this.txtVille.Location = new System.Drawing.Point(112, 249);
+            this.txtVille.Location = new System.Drawing.Point(112, 239);
             this.txtVille.Name = "txtVille";
-            this.txtVille.Size = new System.Drawing.Size(191, 20);
+            this.txtVille.Size = new System.Drawing.Size(122, 20);
             this.txtVille.TabIndex = 12;
             // 
             // txtCoef
             // 
-            this.txtCoef.Location = new System.Drawing.Point(112, 294);
+            this.txtCoef.Location = new System.Drawing.Point(112, 278);
             this.txtCoef.Name = "txtCoef";
             this.txtCoef.Size = new System.Drawing.Size(122, 20);
             this.txtCoef.TabIndex = 13;
             // 
             // txtFonction
             // 
-            this.txtFonction.Location = new System.Drawing.Point(309, 45);
+            this.txtFonction.Location = new System.Drawing.Point(112, 131);
             this.txtFonction.Name = "txtFonction";
-            this.txtFonction.Size = new System.Drawing.Size(193, 20);
+            this.txtFonction.Size = new System.Drawing.Size(122, 20);
             this.txtFonction.TabIndex = 14;
+            // 
+            // txtCode
+            // 
+            this.txtCode.Location = new System.Drawing.Point(112, 45);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(122, 20);
+            this.txtCode.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(31, 48);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(62, 13);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Type_Code";
             // 
             // UcPratictien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtCode);
             this.Controls.Add(this.txtFonction);
             this.Controls.Add(this.txtCoef);
             this.Controls.Add(this.txtVille);
@@ -206,5 +226,7 @@
         private System.Windows.Forms.TextBox txtVille;
         private System.Windows.Forms.TextBox txtCoef;
         private System.Windows.Forms.TextBox txtFonction;
+        private System.Windows.Forms.TextBox txtCode;
+        private System.Windows.Forms.Label label8;
     }
 }

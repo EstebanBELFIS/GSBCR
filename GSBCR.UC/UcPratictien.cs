@@ -35,6 +35,7 @@ namespace GSBCR.UC
 
         private void ucPratictien_actualiser()
         {
+            txtCode.Text = lePracticien.TYP_CODE;
             txtNom.Text = lePracticien.PRA_NOM;
             txtPrenom.Text = lePracticien.PRA_PRENOM;
             txtAddr.Text = lePracticien.PRA_ADRESSE;

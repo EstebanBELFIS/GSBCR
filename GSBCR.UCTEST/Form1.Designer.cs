@@ -37,6 +37,7 @@
             this.bsPracticien = new System.Windows.Forms.BindingSource(this.components);
             this.ucPratictien1 = new GSBCR.UC.UcPratictien();
             this.ucMedicament1 = new GSBCR.UC.UcMedicament();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsMedoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsPracticien)).BeginInit();
             this.SuspendLayout();
@@ -44,7 +45,7 @@
             // cbxMedoc
             // 
             this.cbxMedoc.FormattingEnabled = true;
-            this.cbxMedoc.Location = new System.Drawing.Point(15, 40);
+            this.cbxMedoc.Location = new System.Drawing.Point(15, 34);
             this.cbxMedoc.Name = "cbxMedoc";
             this.cbxMedoc.Size = new System.Drawing.Size(146, 21);
             this.cbxMedoc.TabIndex = 2;
@@ -53,7 +54,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 16);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 13);
             this.label1.TabIndex = 3;
@@ -62,7 +63,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(455, 16);
+            this.label2.Location = new System.Drawing.Point(455, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 13);
             this.label2.TabIndex = 4;
@@ -71,7 +72,7 @@
             // cbxPratictien
             // 
             this.cbxPratictien.FormattingEnabled = true;
-            this.cbxPratictien.Location = new System.Drawing.Point(458, 40);
+            this.cbxPratictien.Location = new System.Drawing.Point(458, 34);
             this.cbxPratictien.Name = "cbxPratictien";
             this.cbxPratictien.Size = new System.Drawing.Size(174, 21);
             this.cbxPratictien.TabIndex = 5;
@@ -79,25 +80,36 @@
             // 
             // ucPratictien1
             // 
-            this.ucPratictien1.Location = new System.Drawing.Point(337, 72);
+            this.ucPratictien1.Location = new System.Drawing.Point(425, 77);
             this.ucPratictien1.Name = "ucPratictien1";
             this.ucPratictien1.pRATICIEN = null;
-            this.ucPratictien1.Size = new System.Drawing.Size(519, 348);
+            this.ucPratictien1.Size = new System.Drawing.Size(519, 353);
             this.ucPratictien1.TabIndex = 6;
             // 
             // ucMedicament1
             // 
             this.ucMedicament1.LeMedicament = null;
-            this.ucMedicament1.Location = new System.Drawing.Point(-28, 61);
+            this.ucMedicament1.Location = new System.Drawing.Point(-28, 56);
             this.ucMedicament1.Name = "ucMedicament1";
             this.ucMedicament1.Size = new System.Drawing.Size(393, 359);
             this.ucMedicament1.TabIndex = 1;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(762, 32);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 7;
+            this.btnClose.Text = "Quitter";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(868, 421);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.ucPratictien1);
             this.Controls.Add(this.cbxPratictien);
             this.Controls.Add(this.label2);
@@ -124,6 +136,7 @@
         private System.Windows.Forms.ComboBox cbxPratictien;
         private UC.UcPratictien ucPratictien1;
         private System.Windows.Forms.BindingSource bsPracticien;
+        private System.Windows.Forms.Button btnClose;
     }
 }
 

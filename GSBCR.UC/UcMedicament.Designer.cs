@@ -116,7 +116,7 @@
             // 
             // txtDepot
             // 
-            this.txtDepot.Location = new System.Drawing.Point(126, 51);
+            this.txtDepot.Location = new System.Drawing.Point(155, 51);
             this.txtDepot.Name = "txtDepot";
             this.txtDepot.Size = new System.Drawing.Size(127, 20);
             this.txtDepot.TabIndex = 7;
@@ -128,10 +128,10 @@
             // 
             // txtNomFam
             // 
-            this.txtNomFam.Location = new System.Drawing.Point(35, 3);
+            this.txtNomFam.Location = new System.Drawing.Point(38, 3);
             this.txtNomFam.Multiline = true;
             this.txtNomFam.Name = "txtNomFam";
-            this.txtNomFam.Size = new System.Drawing.Size(204, 26);
+            this.txtNomFam.Size = new System.Drawing.Size(146, 26);
             this.txtNomFam.TabIndex = 9;
             // 
             // contextMenuStrip2
@@ -148,14 +148,14 @@
             // 
             // txtEffet
             // 
-            this.txtEffet.Location = new System.Drawing.Point(128, 260);
+            this.txtEffet.Location = new System.Drawing.Point(155, 260);
             this.txtEffet.Name = "txtEffet";
             this.txtEffet.Size = new System.Drawing.Size(125, 20);
             this.txtEffet.TabIndex = 12;
             // 
             // txtComposition
             // 
-            this.txtComposition.Location = new System.Drawing.Point(128, 205);
+            this.txtComposition.Location = new System.Drawing.Point(155, 205);
             this.txtComposition.Name = "txtComposition";
             this.txtComposition.Size = new System.Drawing.Size(125, 20);
             this.txtComposition.TabIndex = 13;
@@ -167,14 +167,14 @@
             // 
             // txtContreInd
             // 
-            this.txtContreInd.Location = new System.Drawing.Point(146, 312);
+            this.txtContreInd.Location = new System.Drawing.Point(155, 312);
             this.txtContreInd.Name = "txtContreInd";
             this.txtContreInd.Size = new System.Drawing.Size(125, 20);
             this.txtContreInd.TabIndex = 15;
             // 
             // txtPrix
             // 
-            this.txtPrix.Location = new System.Drawing.Point(146, 363);
+            this.txtPrix.Location = new System.Drawing.Point(155, 363);
             this.txtPrix.Name = "txtPrix";
             this.txtPrix.Size = new System.Drawing.Size(125, 20);
             this.txtPrix.TabIndex = 16;
@@ -183,16 +183,16 @@
             // 
             this.txtNom.Location = new System.Drawing.Point(155, 100);
             this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(98, 20);
+            this.txtNom.Size = new System.Drawing.Size(127, 20);
             this.txtNom.TabIndex = 17;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.txtNomFam);
             this.panel1.Controls.Add(this.txtCodeFam);
-            this.panel1.Location = new System.Drawing.Point(126, 153);
+            this.panel1.Location = new System.Drawing.Point(155, 153);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(242, 32);
+            this.panel1.Size = new System.Drawing.Size(187, 32);
             this.panel1.TabIndex = 18;
             // 
             // UcMedicament

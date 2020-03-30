@@ -55,5 +55,10 @@ namespace GSBCR.UCTEST
                 ucPratictien1.Visible = true;
             }
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
