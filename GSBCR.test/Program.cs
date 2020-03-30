@@ -24,7 +24,8 @@ namespace GSBCR.test
                 Console.WriteLine("6. charger les rapports non consultés des visiteurs d'une région");
                 Console.WriteLine("7. charger les rapports consultés des visiteurs d'une région");
                 Console.WriteLine("8. charger les rapports terminés du visiteur"); //ChargerRapportVisiteurFinis
-                Console.WriteLine("9. Quitter");
+                Console.WriteLine("9. charger un praticien");
+                Console.WriteLine("10. Quitter");
                 Console.WriteLine("Votre choix");
                 
                 n = Convert.ToInt16(Console.ReadLine());
@@ -46,7 +47,9 @@ namespace GSBCR.test
                         break;
                     case 8: test_ChargerRapportVisiteurFinis();
                         break;
-                    case 9: Console.WriteLine("Fin du test");
+                    case 9: test_ChargerPraticien();
+                        break;
+                    case 10: Console.WriteLine("Fin du test");
                         break;
                     default: Console.WriteLine("Mauvais choix");
                         break;
@@ -228,6 +231,30 @@ namespace GSBCR.test
                     Console.WriteLine("visiteur absent ou mdp erroné");
                 }
                 
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.GetBaseException().Message);
+            }
+        }
+
+        static void test_ChargerPraticien()
+        {
+            Console.WriteLine("Entrez le n° praticien :"); //exemple 1, 20, 10, 15
+            short pn = Convert.ToInt16(Console.ReadLine());
+            try
+            {
+                PRATICIEN p = VisiteurManager.ChargerLePraticien(pn);
+                if (p != null)
+                {
+                    Console.WriteLine("Praticne " + p.PRA_NOM + " " + p.PRA_PRENOM);
+                    Console.WriteLine("Adresse : {0} , {1}, {2}", p.PRA_ADRESSE, p.PRA_CP, p.PRA_VILLE);
+                }
+                else
+                {
+                    Console.WriteLine("Praticien absent");
+                }
+
             }
             catch (Exception ex)
             {

@@ -22,7 +22,7 @@ namespace GSBCR.DAL
                 var req = from p in context.PRATICIENs.Include("LeType")
                           where p.PRA_NUM == pranum
                           select p;
-                pas = (PRATICIEN)req;
+                pas = req.SingleOrDefault<PRATICIEN>();
             }
             return pas;
         }
