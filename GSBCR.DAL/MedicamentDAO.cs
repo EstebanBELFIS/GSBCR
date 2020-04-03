@@ -42,6 +42,7 @@ namespace GSBCR.DAL
                 meds = req.ToList<MEDICAMENT>();
 
             }
+            //On retourne la liste des medicaments
             return meds;
             
         }
@@ -63,7 +64,7 @@ namespace GSBCR.DAL
                 meds = req.ToList<MEDICAMENT>();
 
             }
-            //On retourne la liste des medicaments
+            //On retourne la liste des medicaments d'une meme famille
             return meds;
         }
     }
