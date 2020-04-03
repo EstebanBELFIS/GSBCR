@@ -63,6 +63,7 @@ namespace GSBCR.DAL
                 meds = req.ToList<MEDICAMENT>();
 
             }
+            //On retourne la liste des medicaments
             return meds;
         }
     }
