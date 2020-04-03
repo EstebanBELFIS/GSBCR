@@ -35,15 +35,18 @@ namespace GSBCR.BLL
         public static List<RAPPORT_VISITE> ChargerRapportRegionNonLus(String code)
         {
             //A faire : charger les rapports terminés et non lus (état = 2 ) des visiteurs d'une région
+            // Création des variables
             List<RAPPORT_VISITE> lrv = new List<RAPPORT_VISITE>();
             List<VISITEUR> lv = ChargerVisiteurByRegion(code);
             List<string> lvm = new List<string>();
             List<int> le = new List<int>();
             le.Add(2);
+            // Récupere le matricule visiteur de chaque visiteur de la liste V et l'ajoute dans la liste string lvm
             foreach (VISITEUR v in lv)
             {
                 lvm.Add(v.VIS_MATRICULE);
             }
+            // Récupère le rapport de visite et le stocke dans la liste de rapport de visite lrv
             lrv = new RapportVisiteDAO().FindByEtatEtVisiteur(lvm, le);
             return lrv;
         }
@@ -55,15 +58,18 @@ namespace GSBCR.BLL
         public static List<RAPPORT_VISITE> ChargerRapportRegionLus(String r)
         {
             //A faire : charger les rapports terminés (état = 3) des visiteurs d'une région
+            // Création des variables
             List<RAPPORT_VISITE> lrv = new List<RAPPORT_VISITE>();
             List<VISITEUR> lv = ChargerVisiteurByRegion(r);
             List<string> lvm = new List<string>();
             List<int> le = new List<int>();
             le.Add(3);
+            // Récupere le matricule visiteur de chaque visiteur de la liste V et l'ajoute dans la liste string lvm
             foreach (VISITEUR v in lv)
             {
                 lvm.Add(v.VIS_MATRICULE);
             }
+            // Récupère le rapport de visite et le stocke dans la liste de rapport de visite lrv
             lrv = new RapportVisiteDAO().FindByEtatEtVisiteur(lvm, le);
             return lrv;
         }

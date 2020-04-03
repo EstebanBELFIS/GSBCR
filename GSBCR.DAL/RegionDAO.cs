@@ -19,6 +19,7 @@ namespace GSBCR.DAL
             {
                 //désactiver le chargement différé
                 //context.Configuration.LazyLoadingEnabled = false;
+                // Requete pour récupérer la région par son code région
                 var req = from r in context.REGIONs
                           where r.REG_CODE == code
                           select r;
@@ -36,6 +37,7 @@ namespace GSBCR.DAL
             {
                 //désactiver le chargement différé
                 //context.Configuration.LazyLoadingEnabled = false;
+                // Requete pour récuperer tout les régions
                 var req = from r in context.REGIONs
                           select r;
                 regs = req.ToList<REGION>();
