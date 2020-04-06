@@ -12,6 +12,11 @@ namespace GSBCR.DAL
 {
     public class TypePraticienDAO
     {
+        /// <summary>
+        /// Permet de récupérer le Type d'un praticien avec son Id
+        /// </summary>
+        /// <param name="code" type="string">Id du Praticien</param>
+        /// <returns name="type_praticien" type="TYPE_PRATICIEN"></returns>
         public TYPE_PRATICIEN FindById(string code)
         {
             TYPE_PRATICIEN type_praticien = null;
@@ -27,6 +32,10 @@ namespace GSBCR.DAL
             return type_praticien;
         }
 
+        /// <summary>
+        /// Permet de récupérer tous les Type de praticien
+        /// </summary>
+        /// <returns name="pas" type="List<TYPE_PRATICIEN>"></returns>
         public List<TYPE_PRATICIEN> FindAll()
         {
             List<TYPE_PRATICIEN> pas = null;

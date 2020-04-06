@@ -11,9 +11,13 @@ namespace GSBCR.DAL
 {
     public class PratricienDAO
     {
+        /// <summary>
+        /// Permet de récupérer le praticien visite avec son identifiant
+        /// </summary>
+        /// <param name="pranum" type="Int16">Id du Praticien</param>
+        /// <returns name="pas" type="PRATICIEN"></returns>
         public PRATICIEN FindById(Int16 pranum)
         {
-
             PRATICIEN pas = null;
             using (var context = new GSB_VisiteEntities())
             {
@@ -27,6 +31,10 @@ namespace GSBCR.DAL
             return pas;
         }
 
+        /// <summary>
+        /// Permet de récupérer tous les praticien visites
+        /// </summary>
+        /// <returns name="pas" type="List<PRATICIEN>"></returns>
         public List<PRATICIEN> FindAll()
         {
             List<PRATICIEN> pas = null;
@@ -42,6 +50,11 @@ namespace GSBCR.DAL
             return pas;
         }
 
+        /// <summary>
+        /// Permet de récupérer le praticien visite avec son code
+        /// </summary>
+        /// <param name="code" type="string">Type de Praticien</param>
+        /// <returns name="pas" type="List<PRATICIEN>"></returns>
         public List<PRATICIEN> FindByType(string code)
         {
             //A faire : charger tous les praticiens d'un type

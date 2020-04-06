@@ -12,6 +12,11 @@ namespace GSBCR.DAL
 {
     public class MotifVisiteDAO
     {
+        /// <summary>
+        /// Permet de récupérer le motif visite avec son code
+        /// </summary>
+        /// <param name="code" type="string">Code du motif</param>
+        /// <returns name="lmv" type="MOTIF_VISITE"></returns>
         public MOTIF_VISITE FindById(string code)
         {
             //A faire : rechercher un motif visite par son nom
@@ -28,6 +33,10 @@ namespace GSBCR.DAL
             return lmv;
         }
 
+        /// <summary>
+        /// Permet de récupérer tous les motif visites
+        /// </summary>
+        /// <returns name="lmv" type="List<MOTIF_VISITE>"></returns>
         public List<MOTIF_VISITE> FindAll()
         {
             List<MOTIF_VISITE> lmv = null;
