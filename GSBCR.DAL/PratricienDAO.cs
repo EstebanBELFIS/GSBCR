@@ -30,6 +30,7 @@ namespace GSBCR.DAL
 
         public List<PRATICIEN> FindAll()
         {
+            
             List<PRATICIEN> pas = null;
             using (var context = new GSB_VisiteEntities())
             {
