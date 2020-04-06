@@ -89,5 +89,17 @@ namespace GSBCR.UI
                 MessageBox.Show("Aucun rapport en cours", "Gestion Rapports de visite", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void lesPraticiensToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListePraticiens p = new FrmListePraticiens();
+            p.ShowDialog();
+        }
+
+        private void lesMedicamentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListeMedicaments m = new FrmListeMedicaments();
+            m.ShowDialog();
+        }
     }
 }

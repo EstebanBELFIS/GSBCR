@@ -35,7 +35,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtNom = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.txtPrenom = new System.Windows.Forms.TextBox();
@@ -43,7 +42,6 @@
             this.txtCP = new System.Windows.Forms.TextBox();
             this.txtVille = new System.Windows.Forms.TextBox();
             this.txtCoef = new System.Windows.Forms.TextBox();
-            this.txtFonction = new System.Windows.Forms.TextBox();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -69,7 +67,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 168);
+            this.label3.Location = new System.Drawing.Point(31, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 2;
@@ -78,7 +76,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 201);
+            this.label4.Location = new System.Drawing.Point(31, 178);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 13);
             this.label4.TabIndex = 3;
@@ -88,7 +86,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(31, 239);
+            this.label5.Location = new System.Drawing.Point(31, 214);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(26, 13);
             this.label5.TabIndex = 4;
@@ -97,20 +95,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(31, 278);
+            this.label6.Location = new System.Drawing.Point(31, 255);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 13);
             this.label6.TabIndex = 5;
             this.label6.Text = "Coef Notoriété";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(31, 134);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Fonction";
             // 
             // txtNom
             // 
@@ -133,38 +122,31 @@
             // 
             // txtAddr
             // 
-            this.txtAddr.Location = new System.Drawing.Point(112, 165);
+            this.txtAddr.Location = new System.Drawing.Point(112, 142);
             this.txtAddr.Name = "txtAddr";
             this.txtAddr.Size = new System.Drawing.Size(122, 20);
             this.txtAddr.TabIndex = 10;
             // 
             // txtCP
             // 
-            this.txtCP.Location = new System.Drawing.Point(112, 201);
+            this.txtCP.Location = new System.Drawing.Point(112, 178);
             this.txtCP.Name = "txtCP";
             this.txtCP.Size = new System.Drawing.Size(122, 20);
             this.txtCP.TabIndex = 11;
             // 
             // txtVille
             // 
-            this.txtVille.Location = new System.Drawing.Point(112, 239);
+            this.txtVille.Location = new System.Drawing.Point(112, 211);
             this.txtVille.Name = "txtVille";
             this.txtVille.Size = new System.Drawing.Size(122, 20);
             this.txtVille.TabIndex = 12;
             // 
             // txtCoef
             // 
-            this.txtCoef.Location = new System.Drawing.Point(112, 278);
+            this.txtCoef.Location = new System.Drawing.Point(112, 252);
             this.txtCoef.Name = "txtCoef";
             this.txtCoef.Size = new System.Drawing.Size(122, 20);
             this.txtCoef.TabIndex = 13;
-            // 
-            // txtFonction
-            // 
-            this.txtFonction.Location = new System.Drawing.Point(112, 131);
-            this.txtFonction.Name = "txtFonction";
-            this.txtFonction.Size = new System.Drawing.Size(122, 20);
-            this.txtFonction.TabIndex = 14;
             // 
             // txtCode
             // 
@@ -188,14 +170,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtCode);
-            this.Controls.Add(this.txtFonction);
             this.Controls.Add(this.txtCoef);
             this.Controls.Add(this.txtVille);
             this.Controls.Add(this.txtCP);
             this.Controls.Add(this.txtAddr);
             this.Controls.Add(this.txtPrenom);
             this.Controls.Add(this.txtNom);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -217,7 +197,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox txtPrenom;
@@ -225,7 +204,6 @@
         private System.Windows.Forms.TextBox txtCP;
         private System.Windows.Forms.TextBox txtVille;
         private System.Windows.Forms.TextBox txtCoef;
-        private System.Windows.Forms.TextBox txtFonction;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Label label8;
     }

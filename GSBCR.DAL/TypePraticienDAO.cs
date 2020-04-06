@@ -24,6 +24,7 @@ namespace GSBCR.DAL
             {
                 //désactiver le chargement différé
                 //context.Configuration.LazyLoadingEnabled = false;
+                // Rêquete pour récupérer le type praticien à l'aide de l'id 
                 var req = from p in context.TYPE_PRATICIEN
                           where p.TYP_CODE == code
                           select p;
@@ -43,6 +44,7 @@ namespace GSBCR.DAL
             {
                 //désactiver le chargement différé
                 //context.Configuration.LazyLoadingEnabled = false;
+                // Rêquete pour récupérer tout les types praticiens
                 var req = from p in context.TYPE_PRATICIEN
                           select p;
                 pas = req.ToList<TYPE_PRATICIEN>();

@@ -25,6 +25,7 @@ namespace GSBCR.DAL
             {
                 //désactiver le chargement différé
                 //context.Configuration.LazyLoadingEnabled = false;
+                // Rêquete pour récupérer le motif visite par le code
                 var req = from m in context.MOTIF_VISITE
                           where m.MOT_CODE == code
                           select m;
@@ -44,6 +45,7 @@ namespace GSBCR.DAL
             {
                 //désactiver le chargement différé
                 //context.Configuration.LazyLoadingEnabled = false;
+                // Rêquete pour récupérer tout les motif visite 
                 var req = from m in context.MOTIF_VISITE
                           select m;
                 lmv = req.ToList<MOTIF_VISITE>();

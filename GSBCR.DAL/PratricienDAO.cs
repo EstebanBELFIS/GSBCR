@@ -23,6 +23,7 @@ namespace GSBCR.DAL
             {
                 //désactiver le chargement différé
                 //context.Configuration.LazyLoadingEnabled = false;
+                // Rêquete pour récupérer le praticien par rapport à son id
                 var req = from p in context.PRATICIENs.Include("LeType")
                           where p.PRA_NUM == pranum
                           select p;
@@ -37,11 +38,13 @@ namespace GSBCR.DAL
         /// <returns name="pas" type="List<PRATICIEN>"></returns>
         public List<PRATICIEN> FindAll()
         {
+            
             List<PRATICIEN> pas = null;
             using (var context = new GSB_VisiteEntities())
             {
                 //désactiver le chargement différé
                 //context.Configuration.LazyLoadingEnabled = false;
+                // Rêquete pour récupérer tout les praticiens
                 var req = from p in context.PRATICIENs.Include("LeType")
                           select p;
                 pas = req.ToList<PRATICIEN>();

@@ -42,7 +42,6 @@ namespace GSBCR.UC
             txtCP.Text = lePracticien.PRA_CP;
             txtVille.Text = lePracticien.PRA_VILLE;
             txtCoef.Text = lePracticien.PRA_COEFNOTORIETE.ToString();
-            txtFonction.Text = lePracticien.LeType.TYP_LIBELLE;
         }
 
         private void label4_Click(object sender, EventArgs e)
