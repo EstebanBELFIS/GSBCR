@@ -107,5 +107,11 @@ namespace GSBCR.UI
             FrmChangerMdp mdp = new FrmChangerMdp(leVisiteur);
             mdp.ShowDialog();
         }
+
+        private void modifierConsulterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmModifInfosPerso i = new FrmModifInfosPerso(leVisiteur);
+            i.ShowDialog();
+        }
     }
 }

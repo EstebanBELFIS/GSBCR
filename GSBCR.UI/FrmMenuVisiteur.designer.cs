@@ -176,6 +176,7 @@
             this.modifierConsulterToolStripMenuItem.Name = "modifierConsulterToolStripMenuItem";
             this.modifierConsulterToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.modifierConsulterToolStripMenuItem.Text = "Modifier / Consulter";
+            this.modifierConsulterToolStripMenuItem.Click += new System.EventHandler(this.modifierConsulterToolStripMenuItem_Click);
             // 
             // changerMonMotDePasseToolStripMenuItem
             // 

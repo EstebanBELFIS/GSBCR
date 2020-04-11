@@ -96,6 +96,7 @@
             // 
             this.tbxAncienMdp.Location = new System.Drawing.Point(198, 155);
             this.tbxAncienMdp.Name = "tbxAncienMdp";
+            this.tbxAncienMdp.PasswordChar = '*';
             this.tbxAncienMdp.Size = new System.Drawing.Size(212, 20);
             this.tbxAncienMdp.TabIndex = 5;
             // 
@@ -103,6 +104,7 @@
             // 
             this.tbxNouveau.Location = new System.Drawing.Point(198, 205);
             this.tbxNouveau.Name = "tbxNouveau";
+            this.tbxNouveau.PasswordChar = '*';
             this.tbxNouveau.Size = new System.Drawing.Size(212, 20);
             this.tbxNouveau.TabIndex = 6;
             // 
@@ -110,6 +112,7 @@
             // 
             this.tbxConfirm.Location = new System.Drawing.Point(198, 252);
             this.tbxConfirm.Name = "tbxConfirm";
+            this.tbxConfirm.PasswordChar = '*';
             this.tbxConfirm.Size = new System.Drawing.Size(212, 20);
             this.tbxConfirm.TabIndex = 7;
             // 
