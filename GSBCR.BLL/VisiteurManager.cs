@@ -25,6 +25,21 @@ namespace GSBCR.BLL
                 return null;
 
         }
+
+        public static void MajMDPVisiteur(VISITEUR v)
+        {
+            try
+            {
+                new VisiteurDAO().ModifierMDP(v);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
         /// <summary>
         /// Permet de charger la dernière affectation du visiteur
         /// et donc son profil (visiteur, délégué, responsabe secteur) et sa région

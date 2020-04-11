@@ -26,7 +26,36 @@ namespace GSBCR.UI
 
         private void btnValider_Click(object sender, EventArgs e)
         {
+            string ancien = tbxAncienMdp.Text;
+            string nouveau = tbxNouveau.Text;
+            string confirm = tbxConfirm.Text;
+            // Visiteur
+            VISITEUR verif = VisiteurManager.ChargerVisiteur(leVisiteur.VIS_MATRICULE, ancien);
+            if (leVisiteur == null)
+            {
+                lblError.Text = "Ancien mot de passe incorrect";
+                lblError.Visible = true;
+            }
+            else
+            {
+                if(nouveau == confirm && nouveau != ""){
+                    leVisiteur.vis_mdp = nouveau;
+                    VisiteurManager.MajMDPVisiteur(leVisiteur);
+                    lblError.Text = "Votre mot de passe a bien été modifié";
+                    lblError.Visible = true;
+                }
+                else
+                {
+                    lblError.Text = "Données incorrectes pour le nouveau mot de passe";
+                    lblError.Visible = true;
+                }
+                
+            }
+        }
 
+        private void btnQuitter_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

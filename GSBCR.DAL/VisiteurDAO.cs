@@ -31,6 +31,27 @@ namespace GSBCR.DAL
             }
             return vis;
         }
-              
+
+        public VISITEUR ModifierMDP(VISITEUR v)
+        {
+            VISITEUR vis = null;
+            using (var context = new GSB_VisiteEntities())
+            {
+                try
+                {
+                    //mise à jour de l'état du rapport 
+                    context.Entry(v).State = System.Data.EntityState.Modified;
+                    //sauvegarde du contexte
+                    context.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+
+                    throw ex;
+                }
+            }
+            return vis;
+        }
+
     }
 }

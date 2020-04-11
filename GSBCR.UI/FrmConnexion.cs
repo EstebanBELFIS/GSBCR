@@ -40,7 +40,7 @@ namespace GSBCR.UI
             {
                 FrmMenuVisiteur v = new FrmMenuVisiteur(matricule, mdp);
                 v.ShowDialog();
-                this.Close();
+                
             }
             
         }

@@ -37,6 +37,8 @@
             this.tbxNouveau = new System.Windows.Forms.TextBox();
             this.tbxConfirm = new System.Windows.Forms.TextBox();
             this.btnValider = new System.Windows.Forms.Button();
+            this.lblError = new System.Windows.Forms.Label();
+            this.btnQuitter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -113,7 +115,7 @@
             // 
             // btnValider
             // 
-            this.btnValider.Location = new System.Drawing.Point(321, 326);
+            this.btnValider.Location = new System.Drawing.Point(251, 326);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(89, 28);
             this.btnValider.TabIndex = 8;
@@ -121,11 +123,34 @@
             this.btnValider.UseVisualStyleBackColor = true;
             this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
             // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblError.Location = new System.Drawing.Point(78, 23);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 20);
+            this.lblError.TabIndex = 9;
+            this.lblError.Visible = false;
+            // 
+            // btnQuitter
+            // 
+            this.btnQuitter.Location = new System.Drawing.Point(346, 326);
+            this.btnQuitter.Name = "btnQuitter";
+            this.btnQuitter.Size = new System.Drawing.Size(89, 28);
+            this.btnQuitter.TabIndex = 10;
+            this.btnQuitter.Text = "Quitter";
+            this.btnQuitter.UseVisualStyleBackColor = true;
+            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
+            // 
             // FrmChangerMdp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(456, 366);
+            this.Controls.Add(this.btnQuitter);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnValider);
             this.Controls.Add(this.tbxConfirm);
             this.Controls.Add(this.tbxNouveau);
@@ -153,5 +178,7 @@
         private System.Windows.Forms.TextBox tbxNouveau;
         private System.Windows.Forms.TextBox tbxConfirm;
         private System.Windows.Forms.Button btnValider;
+        private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Button btnQuitter;
     }
 }
