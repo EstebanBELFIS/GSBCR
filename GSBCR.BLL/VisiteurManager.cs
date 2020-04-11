@@ -26,11 +26,33 @@ namespace GSBCR.BLL
 
         }
 
+        /// <summary>
+        /// Permet de modifier le mot de passe d'un visiteur
+        /// </summary>
+        /// <param name="v">Le visiteur</param>
         public static void MajMDPVisiteur(VISITEUR v)
         {
             try
             {
                 new VisiteurDAO().ModifierMDP(v);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
+        /// <summary>
+        /// Permet de modifier les informations du visiteur
+        /// </summary>
+        /// <param name="v">Le visiteur</param>
+        public static void MajInfosVisiteur(VISITEUR v)
+        {
+            try
+            {
+                new VisiteurDAO().ModifierInfos(v);
             }
             catch (Exception ex)
             {
