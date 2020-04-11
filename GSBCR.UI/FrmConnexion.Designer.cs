@@ -94,6 +94,7 @@
             // 
             this.tbxMdp.Location = new System.Drawing.Point(160, 215);
             this.tbxMdp.Name = "tbxMdp";
+            this.tbxMdp.PasswordChar = '*';
             this.tbxMdp.Size = new System.Drawing.Size(195, 20);
             this.tbxMdp.TabIndex = 5;
             this.tbxMdp.Text = "30BFD069";
