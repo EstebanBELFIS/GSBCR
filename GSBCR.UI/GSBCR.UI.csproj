@@ -71,6 +71,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmConnexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConnexion.Designer.cs">
+      <DependentUpon>FrmConnexion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmListeMedicaments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmConnexion.resx">
+      <DependentUpon>FrmConnexion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmListeMedicaments.resx">
       <DependentUpon>FrmListeMedicaments.cs</DependentUpon>
     </EmbeddedResource>
