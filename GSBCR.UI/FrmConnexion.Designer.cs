@@ -88,6 +88,7 @@
             this.tbxId.Name = "tbxId";
             this.tbxId.Size = new System.Drawing.Size(195, 20);
             this.tbxId.TabIndex = 4;
+            this.tbxId.Text = "a131";
             // 
             // tbxMdp
             // 
@@ -95,6 +96,7 @@
             this.tbxMdp.Name = "tbxMdp";
             this.tbxMdp.Size = new System.Drawing.Size(195, 20);
             this.tbxMdp.TabIndex = 5;
+            this.tbxMdp.Text = "30BFD069";
             // 
             // lblError
             // 

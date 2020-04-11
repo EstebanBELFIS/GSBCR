@@ -101,5 +101,11 @@ namespace GSBCR.UI
             FrmListeMedicaments m = new FrmListeMedicaments();
             m.ShowDialog();
         }
+
+        private void changerMonMotDePasseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmChangerMdp mdp = new FrmChangerMdp(leVisiteur);
+            mdp.ShowDialog();
+        }
     }
 }

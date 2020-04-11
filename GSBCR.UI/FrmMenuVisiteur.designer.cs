@@ -182,6 +182,7 @@
             this.changerMonMotDePasseToolStripMenuItem.Name = "changerMonMotDePasseToolStripMenuItem";
             this.changerMonMotDePasseToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.changerMonMotDePasseToolStripMenuItem.Text = "Changer mon mot de passe";
+            this.changerMonMotDePasseToolStripMenuItem.Click += new System.EventHandler(this.changerMonMotDePasseToolStripMenuItem_Click);
             // 
             // maRégionToolStripMenuItem
             // 
