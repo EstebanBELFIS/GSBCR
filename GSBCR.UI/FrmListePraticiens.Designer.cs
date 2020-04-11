@@ -97,7 +97,6 @@
             this.Controls.Add(this.ucPratictien1);
             this.Name = "FrmListePraticiens";
             this.Text = "FrmListePraticiens";
-            this.Load += new System.EventHandler(this.FrmListePraticiens_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bsPraticien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gsb_visite_groupe1DataSet)).EndInit();
             this.ResumeLayout(false);

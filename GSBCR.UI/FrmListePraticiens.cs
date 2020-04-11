@@ -22,12 +22,30 @@ namespace GSBCR.UI
             bsPraticien.DataSource = VisiteurManager.ChargerPraticiens();
             cbxPratictien.DataSource = bsPraticien;
             cbxPratictien.DisplayMember = "PRA_NOM";
-        }
-
-        private void FrmListePraticiens_Load(object sender, EventArgs e)
-        {
             ucPratictien1.Visible = false;
             cbxPratictien.SelectedIndex = -1;
+        }
+
+        public FrmListePraticiens(int index)
+        {
+            InitializeComponent();
+            // Pratictien
+            bsPraticien.DataSource = VisiteurManager.ChargerPraticiens();
+            cbxPratictien.DataSource = bsPraticien;
+            cbxPratictien.DisplayMember = "PRA_NOM";
+            cbxPratictien.SelectedIndex = index;
+            if (cbxPratictien.SelectedIndex != -1 )
+            {
+                PRATICIEN p = (PRATICIEN)cbxPratictien.SelectedItem;
+                ucPratictien1.pRATICIEN = p;
+                ucPratictien1.Visible = true;
+            }
+            else
+            {
+                ucPratictien1.Visible = false;
+                cbxPratictien.SelectedIndex = -1;
+            }
+           
         }
 
         private void cbxPratictien_SelectedIndexChanged(object sender, EventArgs e)

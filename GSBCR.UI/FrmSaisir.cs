@@ -20,6 +20,7 @@ namespace GSBCR.UI
         /// <param name="maj">code maj</param>
         /// <returns></returns>
         private RAPPORT_VISITE r;
+        string errortext;
         //maj = vrai si création/modification
         //maj = faux si consultation
         public FrmSaisir(RAPPORT_VISITE r, bool maj)
@@ -169,6 +170,10 @@ namespace GSBCR.UI
                 }
              btnValider.Enabled = true;
             }
+            else
+            {
+                MessageBox.Show("Certains champs n'ont pas été complété correctement :" + errortext, "Erreur données manquante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void cbxNomPraticien_SelectedIndexChanged(object sender, EventArgs e)
@@ -224,16 +229,21 @@ namespace GSBCR.UI
         private void btnVoirmed1_Click(object sender, EventArgs e)
         {
             //to do
+            FrmListeMedicaments m = new FrmListeMedicaments(cbxMed1.SelectedIndex);
+            m.ShowDialog();
         }
 
         private void btnVoirMed2_Click(object sender, EventArgs e)
         {
             //to do
+            FrmListeMedicaments m = new FrmListeMedicaments(cbxMed2.SelectedIndex);
+            m.ShowDialog();
         }
 
         private void btnVoirPatricien_Click(object sender, EventArgs e)
         {
-            //to do
+            FrmListePraticiens p = new FrmListePraticiens(cbxNomPraticien.SelectedIndex);
+            p.ShowDialog();
         }
 
         private void cbxNomPraticien_Validating(object sender, CancelEventArgs e)
@@ -274,9 +284,16 @@ namespace GSBCR.UI
                 {
                     errorProvider1.SetError(this.txtBilan, "obligatoire");
                 }
-                if (cbxMotif.SelectedValue.ToString()=="AU" && string.IsNullOrEmpty(txtAutre.Text))
+                if (cbxMotif.SelectedValue != null)
                 {
-                    errorProvider1.SetError(this.txtAutre, "obligatoire");
+                    if (cbxMotif.SelectedValue.ToString() == "AU" && string.IsNullOrEmpty(txtAutre.Text))
+                    {
+                        errorProvider1.SetError(this.txtAutre, "obligatoire");
+                    }
+                } 
+                else
+                {
+                    errorProvider1.SetError(this.cbxMotif, "obligatoire");
                 }
             }
             else
@@ -288,10 +305,13 @@ namespace GSBCR.UI
         private bool verifier()
         {
             bool ok = true;
+            errortext = "";
             if (cbxNomPraticien.SelectedValue == null)
             {
+                // Erreur : Praticien pas renseigné
                 errorProvider1.SetError(cbxNomPraticien, "obligatoire");
                 ok = false;
+                errortext = errortext + "\nPraticien";
             }
             else
             {
@@ -299,12 +319,38 @@ namespace GSBCR.UI
             }
             if (cbxMotif.SelectedValue == null)
             {
+                // Erreur : Motif pas renseigné
                 errorProvider1.SetError(this.cbxMotif, "obligatoire");
                 ok = false;
+                errortext = errortext + "\nMotif";
             }
             else
             {
                 errorProvider1.SetError(cbxMotif, "");
+            }
+            if (chbDefinitif.Checked)
+            {
+                if (string.IsNullOrEmpty(txtBilan.Text))
+                {
+                    // Erreur : Bilan pas renseigné
+                    errorProvider1.SetError(this.txtBilan, "obligatoire");
+                    ok = false;
+                    errortext = errortext + "\nBilan";
+                }
+                else
+                {
+                    errorProvider1.SetError(this.txtBilan, "");
+                }
+                if (cbxMotif.SelectedValue != null)
+                {
+                    if (cbxMotif.SelectedValue.ToString() == "AU" && string.IsNullOrEmpty(txtAutre.Text))
+                    {
+                        // Erreur : Motif autre selectionne && Texte autre vide
+                        errorProvider1.SetError(this.txtAutre, "obligatoire");
+                        ok = false;
+                        errortext = errortext + "\nMotif Autre";
+                    }
+                }
             }
             return ok;
         }
