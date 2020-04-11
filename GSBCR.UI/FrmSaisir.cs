@@ -306,6 +306,13 @@ namespace GSBCR.UI
         {
             bool ok = true;
             errortext = "";
+            if (string.IsNullOrEmpty(nupCoef.Text))
+            {
+                // Erreur : code confiance pas renseigné
+                errorProvider1.SetError(nupCoef, "obligatoire");
+                ok = false;
+                errortext = errortext + "\nCode Confiance";
+            }
             if (cbxNomPraticien.SelectedValue == null)
             {
                 // Erreur : Praticien pas renseigné
