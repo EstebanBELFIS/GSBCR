@@ -85,7 +85,12 @@ namespace GSBCR.UI
 
         private void btnRapport_Click(object sender, EventArgs e)
         {
+            PRATICIEN p = (PRATICIEN)cbxPratictien.SelectedItem;
+            lePraticien = p;
+            List<RAPPORT_VISITE> lr = VisiteurManager.ChargerRapportVisiteurPraticien(leVisiteur.VIS_MATRICULE, lePraticien.PRA_NUM);
             
+            FrmRapportEnCours f = new FrmRapportEnCours(leVisiteur, lr);
+            f.ShowDialog();
         }
     }
 }
