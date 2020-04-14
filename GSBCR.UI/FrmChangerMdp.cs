@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using GSBCR.BLL;
 using GSBCR.modele;
 using GSBCR.UC;
+using System.Text.RegularExpressions;
 
 namespace GSBCR.UI
 {
@@ -33,29 +34,68 @@ namespace GSBCR.UI
             VISITEUR verif = VisiteurManager.ChargerVisiteur(leVisiteur.VIS_MATRICULE, ancien);
             if (leVisiteur == null)
             {
-                lblError.Text = "Ancien mot de passe incorrect";
-                lblError.Visible = true;
+                MessageBox.Show("Ancien mot de passe incorrect", "Données incorrectes pour le nouveau mot de passe", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
             else
             {
-                if(nouveau == confirm && nouveau != ""){
-                    leVisiteur.vis_mdp = nouveau;
-                    VisiteurManager.MajMDPVisiteur(leVisiteur);
-                    lblError.Text = "Votre mot de passe a bien été modifié";
-                    lblError.Visible = true;
+                if (ancien != "" && nouveau != "" && confirm != "")
+                {
+                    if (ancien != nouveau)
+                    {
+                        if (nouveau == confirm)
+                        {
+                            if (nouveau.Length >= 8) {
+                                if (ValidMDP(nouveau) == true)
+                                {
+                                    leVisiteur.vis_mdp = nouveau;
+                                    VisiteurManager.MajMDPVisiteur(leVisiteur);
+                                    lblError.Text = "Votre mot de passe a bien été modifié";
+                                    lblError.Visible = true;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Le mot de passe n'est pas assez fort", "Données incorrectes pour le nouveau mot de passe", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Le mot de passe est trop court, il doit contenir au minimum 8 characteres", "Données incorrectes pour le nouveau mot de passe", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Les cases 'Nouveau' et 'Confirmer' n'ont pas les mêmes valeurs", "Données incorrectes pour le nouveau mot de passe", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Votre nouveau mot de passe est identique à l'ancien", "Données incorrectes pour le nouveau mot de passe", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        lblError.Text = "Données incorrectes pour le nouveau mot de passe";
+                        lblError.Visible = true;
+                    }
                 }
                 else
                 {
-                    lblError.Text = "Données incorrectes pour le nouveau mot de passe";
-                    lblError.Visible = true;
+                    MessageBox.Show("Un ou plusieurs champs sont vides!", "Données incorrectes pour le nouveau mot de passe", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
-                
+
             }
         }
 
         private void btnQuitter_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private bool ValidMDP(string mdp)
+        {
+            Regex myRegex = new Regex(@"(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}");
+            return myRegex.IsMatch(mdp); // retourne true ou false selon la vérification
         }
     }
 }
