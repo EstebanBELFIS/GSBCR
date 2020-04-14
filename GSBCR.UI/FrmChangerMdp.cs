@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using GSBCR.BLL;
 using GSBCR.modele;
 using GSBCR.UC;
-using System.Text.RegularExpressions;
 
 namespace GSBCR.UI
 {
@@ -74,8 +73,7 @@ namespace GSBCR.UI
                     else
                     {
                         MessageBox.Show("Votre nouveau mot de passe est identique à l'ancien", "Données incorrectes pour le nouveau mot de passe", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        lblError.Text = "Données incorrectes pour le nouveau mot de passe";
-                        lblError.Visible = true;
+                        
                     }
                 }
                 else
@@ -94,8 +92,14 @@ namespace GSBCR.UI
 
         private bool ValidMDP(string mdp)
         {
-            Regex myRegex = new Regex(@"(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}");
-            return myRegex.IsMatch(mdp); // retourne true ou false selon la vérification
+            if (mdp.Any(char.IsUpper) && mdp.Any(char.IsLower) && mdp.Any(char.IsDigit))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

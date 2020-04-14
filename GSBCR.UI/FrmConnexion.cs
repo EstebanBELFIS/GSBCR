@@ -49,8 +49,8 @@ namespace GSBCR.UI
             }
             else
             {
-                lblError.Visible = V;
-                lblError.Text = "Il y a des champs vide!";
+                MessageBox.Show("Il y a des champs vides!!", "Données incorrectes pour la connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
 
@@ -75,7 +75,12 @@ namespace GSBCR.UI
         private void btnTests_Click(object sender, EventArgs e)
         {
             tbxId.Text = "r24";
-            tbxMdp.Text = "5BD22344";
+            tbxMdp.Text = "5BD2234d";
+        }
+
+        private void btnQuitter_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

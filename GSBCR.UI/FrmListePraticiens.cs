@@ -15,15 +15,20 @@ namespace GSBCR.UI
 {
     public partial class FrmListePraticiens : Form
     {
-        public FrmListePraticiens()
+        private VISITEUR leVisiteur;
+        private PRATICIEN lePraticien;
+        public FrmListePraticiens(VISITEUR v)
         {
             InitializeComponent();
             // Pratictien
+            leVisiteur = v;
             bsPraticien.DataSource = VisiteurManager.ChargerPraticiens();
             cbxPratictien.DataSource = bsPraticien;
             cbxPratictien.DisplayMember = "PRA_NOM";
             ucPratictien1.Visible = false;
             cbxPratictien.SelectedIndex = -1;
+            btnRapport.Visible = false;
+
         }
 
         public FrmListePraticiens(int index)
@@ -53,8 +58,18 @@ namespace GSBCR.UI
             if (cbxPratictien.SelectedIndex != -1)
             {
                 PRATICIEN p = (PRATICIEN)cbxPratictien.SelectedItem;
+                lePraticien = p;
                 ucPratictien1.pRATICIEN = p;
                 ucPratictien1.Visible = true;
+                List<RAPPORT_VISITE> lr = VisiteurManager.ChargerRapportVisiteurPraticien(leVisiteur.VIS_MATRICULE, lePraticien.PRA_NUM);
+                if(lr!= null && lr.Count > 0)
+                {
+                    btnRapport.Visible = true;
+
+                }
+                else{
+                    btnRapport.Visible = false;
+                }
             }
         }
 
@@ -66,6 +81,11 @@ namespace GSBCR.UI
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnRapport_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
