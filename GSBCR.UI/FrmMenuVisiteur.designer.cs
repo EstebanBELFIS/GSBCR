@@ -147,6 +147,7 @@
             this.mesRapportsValidésToolStripMenuItem.Name = "mesRapportsValidésToolStripMenuItem";
             this.mesRapportsValidésToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.mesRapportsValidésToolStripMenuItem.Text = "Mes rapports validés";
+            this.mesRapportsValidésToolStripMenuItem.Click += new System.EventHandler(this.mesRapportsValidésToolStripMenuItem_Click);
             // 
             // lesMedicamentsToolStripMenuItem
             // 
