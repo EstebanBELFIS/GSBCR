@@ -31,18 +31,51 @@ namespace GSBCR.UI
             matricule = tbxId.Text;
             mdp = tbxMdp.Text;
             // Visiteur
-            leVisiteur = VisiteurManager.ChargerVisiteur(matricule, mdp);
-            if(leVisiteur == null)
+            if (matricule != "" && mdp != "")
             {
-                lblError.Visible = V;
+                leVisiteur = VisiteurManager.ChargerVisiteur(matricule, mdp);
+                if (leVisiteur == null)
+                {
+                    lblError.Visible = V;
+                }
+                else
+                {
+                    lblError.Visible = V;
+                    lblError.Text = "Connexion réussie";
+                    FrmMenuVisiteur v = new FrmMenuVisiteur(matricule, mdp);
+                    v.ShowDialog();
+
+                }
             }
             else
             {
-                FrmMenuVisiteur v = new FrmMenuVisiteur(matricule, mdp);
-                v.ShowDialog();
-                
+                lblError.Visible = V;
+                lblError.Text = "Il y a des champs vide!";
             }
-            
+        }
+
+        private void btnVisiteur_Click(object sender, EventArgs e)
+        {
+            tbxId.Text = "a131";
+            tbxMdp.Text = "30BFD069";
+        }
+
+        private void btnDelegue_Click(object sender, EventArgs e)
+        {
+            tbxId.Text = "k53";
+            tbxMdp.Text = "D416E9B0";
+        }
+
+        private void btnResponsable_Click(object sender, EventArgs e)
+        {
+            tbxId.Text = "j45";
+            tbxMdp.Text = "B8703965";
+        }
+
+        private void btnTests_Click(object sender, EventArgs e)
+        {
+            tbxId.Text = "r24";
+            tbxMdp.Text = "5BD22344";
         }
     }
 }
