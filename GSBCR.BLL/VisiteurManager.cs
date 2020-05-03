@@ -88,6 +88,19 @@ namespace GSBCR.BLL
             lr = new RapportVisiteDAO().FindByEtatEtVisiteur(lm, le);
             return lr;
         }
+
+        /// <summary>
+        /// Retourne la liste des rapports visite entre un visteur et un praticien
+        /// </summary>
+        /// <param name="matricule">Le matricule du visiteur</param>
+        /// <param name="pranum">Le numero du praticien</param>
+        /// <returns>List<RAPPORT_VISITE></returns>
+        public static List<RAPPORT_VISITE> ChargerRapportVisiteurPraticien(string matricule, int pranum)
+        {
+            List<RAPPORT_VISITE> lr = new RapportVisiteDAO().FindByMatriculeEtPranum(matricule, pranum);
+            return lr;
+        }
+
         /// <summary>
         /// Permet de charger un rapport de visite
         /// </summary>

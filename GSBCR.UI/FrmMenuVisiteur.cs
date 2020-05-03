@@ -92,7 +92,7 @@ namespace GSBCR.UI
 
         private void lesPraticiensToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmListePraticiens p = new FrmListePraticiens();
+            FrmListePraticiens p = new FrmListePraticiens(leVisiteur);
             p.ShowDialog();
         }
 

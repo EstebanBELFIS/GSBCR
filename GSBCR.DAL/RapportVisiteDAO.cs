@@ -121,6 +121,28 @@ namespace GSBCR.DAL
             }
         }
 
+        /// <summary>
+        /// Retourne la liste des rapports visite entre un visteur et un praticien
+        /// </summary>
+        /// <param name="m">Matricule du visiteur</param>
+        /// <param name="n">Numero du praticien</param>
+        /// <returns>List<RAPPORT_VISITE></returns>
+        public List<RAPPORT_VISITE> FindByMatriculeEtPranum(string m, int n)
+        {
+            List<RAPPORT_VISITE> lr = null;
+            using (var context = new GSB_VisiteEntities())
+            {
+                //désactiver le chargement différé
+                //context.Configuration.LazyLoadingEnabled = false;
+                var req = from r in context.RAPPORT_VISITE
+                          where r.RAP_MATRICULE == m && r.RAP_PRANUM == n
+                          select r;
+                lr = req.ToList<RAPPORT_VISITE>();
+
+            }
+            return lr;
+        }
+
 
     }
 }
