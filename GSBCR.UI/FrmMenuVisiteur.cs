@@ -25,11 +25,11 @@ namespace GSBCR.UI
                 //Ici initialiser le visiteur en dur
                 //visiteur
                 leVisiteur = VisiteurManager.ChargerVisiteur(matricule, mdp);
+                leProfil = VisiteurManager.ChargerAffectationVisiteur(leVisiteur.VIS_MATRICULE);
                 //délégue
                 //leVisiteur = VisiteurManager.ChargerVisiteur("r58", "secret18");
                 //responsable
                 //leVisiteur = VisiteurManager.ChargerVisiteur("r24", "secret18");
-                leProfil = VisiteurManager.ChargerAffectationVisiteur(leVisiteur.VIS_MATRICULE);
                 if (leProfil.TRA_ROLE == "Délégué")
                 {
                     maRégionToolStripMenuItem.Enabled = true;
@@ -120,6 +120,28 @@ namespace GSBCR.UI
             try
             {
                 lesRapports = VisiteurManager.ChargerRapportVisiteurFinis(leVisiteur.VIS_MATRICULE);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            if (lesRapports != null && lesRapports.Count != 0)
+            {
+                FrmConsulterRapportValide f = new FrmConsulterRapportValide(leVisiteur, lesRapports);
+                f.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Aucun rapport en cours", "Gestion Rapports de visite", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void rapportsValidesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<RAPPORT_VISITE> lesRapports = null;
+            try
+            {
+                lesRapports = DelegueManager.ChargerRapportRegionNonLus(leProfil.REG_CODE);
             }
             catch (Exception ex)
             {
