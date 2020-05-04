@@ -39,13 +39,13 @@
             this.rAPMATRICULEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAPNUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAPPRANUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RAP_NOMREMPL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAPDATVISITDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAPETATDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAPCONFIANCEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAPBILANDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAPMOTIFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAPNOMREMPLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rAPPNOMREMPLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAPMED1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAPMED2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.leMedicament1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,8 +54,6 @@
             this.lesEchantillonsOffertsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lePraticienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.leVisiteurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RAP_NOMREMPL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RAP_PNOMREMPL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RAP_CONFIANCE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -134,13 +132,13 @@
             this.rAPMATRICULEDataGridViewTextBoxColumn,
             this.rAPNUMDataGridViewTextBoxColumn,
             this.rAPPRANUMDataGridViewTextBoxColumn,
+            this.RAP_NOMREMPL,
             this.rAPDATVISITDataGridViewTextBoxColumn,
             this.rAPETATDataGridViewTextBoxColumn,
             this.rAPCONFIANCEDataGridViewTextBoxColumn,
             this.rAPBILANDataGridViewTextBoxColumn,
             this.rAPMOTIFDataGridViewTextBoxColumn,
             this.rAPNOMREMPLDataGridViewTextBoxColumn,
-            this.rAPPNOMREMPLDataGridViewTextBoxColumn,
             this.rAPMED1DataGridViewTextBoxColumn,
             this.rAPMED2DataGridViewTextBoxColumn,
             this.leMedicament1DataGridViewTextBoxColumn,
@@ -149,8 +147,6 @@
             this.lesEchantillonsOffertsDataGridViewTextBoxColumn,
             this.lePraticienDataGridViewTextBoxColumn,
             this.leVisiteurDataGridViewTextBoxColumn,
-            this.RAP_NOMREMPL,
-            this.RAP_PNOMREMPL,
             this.RAP_CONFIANCE});
             this.dgvRapportEnCours.DataSource = this.bsRapportEnCours;
             this.dgvRapportEnCours.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -183,6 +179,12 @@
             this.rAPPRANUMDataGridViewTextBoxColumn.HeaderText = "RAP_PRANUM";
             this.rAPPRANUMDataGridViewTextBoxColumn.Name = "rAPPRANUMDataGridViewTextBoxColumn";
             this.rAPPRANUMDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // RAP_NOMREMPL
+            // 
+            this.RAP_NOMREMPL.DataPropertyName = "RAP_NOMREMPL";
+            this.RAP_NOMREMPL.HeaderText = "RAP_NOMREMPL";
+            this.RAP_NOMREMPL.Name = "RAP_NOMREMPL";
             // 
             // rAPDATVISITDataGridViewTextBoxColumn
             // 
@@ -223,13 +225,6 @@
             this.rAPNOMREMPLDataGridViewTextBoxColumn.HeaderText = "RAP_NOMREMPL";
             this.rAPNOMREMPLDataGridViewTextBoxColumn.Name = "rAPNOMREMPLDataGridViewTextBoxColumn";
             this.rAPNOMREMPLDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // rAPPNOMREMPLDataGridViewTextBoxColumn
-            // 
-            this.rAPPNOMREMPLDataGridViewTextBoxColumn.DataPropertyName = "RAP_PNOMREMPL";
-            this.rAPPNOMREMPLDataGridViewTextBoxColumn.HeaderText = "RAP_PNOMREMPL";
-            this.rAPPNOMREMPLDataGridViewTextBoxColumn.Name = "rAPPNOMREMPLDataGridViewTextBoxColumn";
-            this.rAPPNOMREMPLDataGridViewTextBoxColumn.Visible = false;
             // 
             // rAPMED1DataGridViewTextBoxColumn
             // 
@@ -285,18 +280,6 @@
             this.leVisiteurDataGridViewTextBoxColumn.Name = "leVisiteurDataGridViewTextBoxColumn";
             this.leVisiteurDataGridViewTextBoxColumn.Visible = false;
             // 
-            // RAP_NOMREMPL
-            // 
-            this.RAP_NOMREMPL.DataPropertyName = "RAP_NOMREMPL";
-            this.RAP_NOMREMPL.HeaderText = "RAP_NOMREMPL";
-            this.RAP_NOMREMPL.Name = "RAP_NOMREMPL";
-            // 
-            // RAP_PNOMREMPL
-            // 
-            this.RAP_PNOMREMPL.DataPropertyName = "RAP_PNOMREMPL";
-            this.RAP_PNOMREMPL.HeaderText = "RAP_PNOMREMPL";
-            this.RAP_PNOMREMPL.Name = "RAP_PNOMREMPL";
-            // 
             // RAP_CONFIANCE
             // 
             this.RAP_CONFIANCE.DataPropertyName = "RAP_CONFIANCE";
@@ -334,13 +317,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPMATRICULEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPNUMDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPPRANUMDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RAP_NOMREMPL;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPDATVISITDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPETATDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPCONFIANCEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPBILANDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPMOTIFDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPNOMREMPLDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rAPPNOMREMPLDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPMED1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPMED2DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn leMedicament1DataGridViewTextBoxColumn;
@@ -349,8 +332,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn lesEchantillonsOffertsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lePraticienDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn leVisiteurDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RAP_NOMREMPL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RAP_PNOMREMPL;
         private System.Windows.Forms.DataGridViewTextBoxColumn RAP_CONFIANCE;
     }
 }
