@@ -38,6 +38,11 @@
             this.lblError = new System.Windows.Forms.Label();
             this.bsVisiteur = new System.Windows.Forms.BindingSource(this.components);
             this.gsb_visite_groupe1DataSet = new GSBCR.UI.gsb_visite_groupe1DataSet();
+            this.btnVisiteur = new System.Windows.Forms.Button();
+            this.btnDelegue = new System.Windows.Forms.Button();
+            this.btnResponsable = new System.Windows.Forms.Button();
+            this.btnTests = new System.Windows.Forms.Button();
+            this.btnQuitter = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsVisiteur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gsb_visite_groupe1DataSet)).BeginInit();
             this.SuspendLayout();
@@ -104,12 +109,11 @@
             this.lblError.AutoSize = true;
             this.lblError.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.lblError.Location = new System.Drawing.Point(53, 109);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(203, 20);
+            this.lblError.Size = new System.Drawing.Size(2, 20);
             this.lblError.TabIndex = 6;
-            this.lblError.Text = "! Informations incorrectes";
             this.lblError.Visible = false;
             // 
             // bsVisiteur
@@ -122,11 +126,66 @@
             this.gsb_visite_groupe1DataSet.DataSetName = "gsb_visite_groupe1DataSet";
             this.gsb_visite_groupe1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // btnVisiteur
+            // 
+            this.btnVisiteur.Location = new System.Drawing.Point(13, 335);
+            this.btnVisiteur.Name = "btnVisiteur";
+            this.btnVisiteur.Size = new System.Drawing.Size(75, 23);
+            this.btnVisiteur.TabIndex = 7;
+            this.btnVisiteur.Text = "Visiteur";
+            this.btnVisiteur.UseVisualStyleBackColor = true;
+            this.btnVisiteur.Click += new System.EventHandler(this.btnVisiteur_Click);
+            // 
+            // btnDelegue
+            // 
+            this.btnDelegue.Location = new System.Drawing.Point(116, 335);
+            this.btnDelegue.Name = "btnDelegue";
+            this.btnDelegue.Size = new System.Drawing.Size(75, 23);
+            this.btnDelegue.TabIndex = 8;
+            this.btnDelegue.Text = "Délégué";
+            this.btnDelegue.UseVisualStyleBackColor = true;
+            this.btnDelegue.Click += new System.EventHandler(this.btnDelegue_Click);
+            // 
+            // btnResponsable
+            // 
+            this.btnResponsable.Location = new System.Drawing.Point(220, 335);
+            this.btnResponsable.Name = "btnResponsable";
+            this.btnResponsable.Size = new System.Drawing.Size(80, 23);
+            this.btnResponsable.TabIndex = 9;
+            this.btnResponsable.Text = "Responsable";
+            this.btnResponsable.UseVisualStyleBackColor = true;
+            this.btnResponsable.Click += new System.EventHandler(this.btnResponsable_Click);
+            // 
+            // btnTests
+            // 
+            this.btnTests.Location = new System.Drawing.Point(13, 412);
+            this.btnTests.Name = "btnTests";
+            this.btnTests.Size = new System.Drawing.Size(287, 23);
+            this.btnTests.TabIndex = 10;
+            this.btnTests.Text = "Tests Esteban";
+            this.btnTests.UseVisualStyleBackColor = true;
+            this.btnTests.Click += new System.EventHandler(this.btnTests_Click);
+            // 
+            // btnQuitter
+            // 
+            this.btnQuitter.Location = new System.Drawing.Point(336, 409);
+            this.btnQuitter.Name = "btnQuitter";
+            this.btnQuitter.Size = new System.Drawing.Size(130, 29);
+            this.btnQuitter.TabIndex = 11;
+            this.btnQuitter.Text = "Quitter";
+            this.btnQuitter.UseVisualStyleBackColor = true;
+            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
+            // 
             // FrmConnexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(503, 450);
+            this.Controls.Add(this.btnQuitter);
+            this.Controls.Add(this.btnTests);
+            this.Controls.Add(this.btnResponsable);
+            this.Controls.Add(this.btnDelegue);
+            this.Controls.Add(this.btnVisiteur);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.tbxMdp);
             this.Controls.Add(this.tbxId);
@@ -154,5 +213,10 @@
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.BindingSource bsVisiteur;
         private gsb_visite_groupe1DataSet gsb_visite_groupe1DataSet;
+        private System.Windows.Forms.Button btnVisiteur;
+        private System.Windows.Forms.Button btnDelegue;
+        private System.Windows.Forms.Button btnResponsable;
+        private System.Windows.Forms.Button btnTests;
+        private System.Windows.Forms.Button btnQuitter;
     }
 }

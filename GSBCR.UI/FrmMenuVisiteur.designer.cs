@@ -45,7 +45,7 @@
             this.modifierConsulterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changerMonMotDePasseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.maRégionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rapportsNonConsultésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rapportsValidesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listeDesVisiteursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.monSecteurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionÉquipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -147,6 +147,7 @@
             this.mesRapportsValidésToolStripMenuItem.Name = "mesRapportsValidésToolStripMenuItem";
             this.mesRapportsValidésToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.mesRapportsValidésToolStripMenuItem.Text = "Mes rapports validés";
+            this.mesRapportsValidésToolStripMenuItem.Click += new System.EventHandler(this.mesRapportsValidésToolStripMenuItem_Click);
             // 
             // lesMedicamentsToolStripMenuItem
             // 
@@ -188,18 +189,19 @@
             // maRégionToolStripMenuItem
             // 
             this.maRégionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rapportsNonConsultésToolStripMenuItem,
+            this.rapportsValidesToolStripMenuItem,
             this.listeDesVisiteursToolStripMenuItem});
             this.maRégionToolStripMenuItem.Enabled = false;
             this.maRégionToolStripMenuItem.Name = "maRégionToolStripMenuItem";
             this.maRégionToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.maRégionToolStripMenuItem.Text = "Ma région";
             // 
-            // rapportsNonConsultésToolStripMenuItem
+            // rapportsValidesToolStripMenuItem
             // 
-            this.rapportsNonConsultésToolStripMenuItem.Name = "rapportsNonConsultésToolStripMenuItem";
-            this.rapportsNonConsultésToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.rapportsNonConsultésToolStripMenuItem.Text = "Rapports non consultés";
+            this.rapportsValidesToolStripMenuItem.Name = "rapportsValidesToolStripMenuItem";
+            this.rapportsValidesToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.rapportsValidesToolStripMenuItem.Text = "Rapports non consultés";
+            this.rapportsValidesToolStripMenuItem.Click += new System.EventHandler(this.rapportsValidesToolStripMenuItem_Click);
             // 
             // listeDesVisiteursToolStripMenuItem
             // 
@@ -297,7 +299,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripMenuItem maRégionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rapportsNonConsultésToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rapportsValidesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listeDesVisiteursToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem monSecteurToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionÉquipeToolStripMenuItem;

@@ -34,7 +34,6 @@ namespace GSBCR.BLL
         /// <returns>List<RAPPORT_VISITE>/returns>
         public static List<RAPPORT_VISITE> ChargerRapportRegionNonLus(String code)
         {
-            //A faire : charger les rapports terminés et non lus (état = 2 ) des visiteurs d'une région
             // Création des variables
             List<RAPPORT_VISITE> lrv = new List<RAPPORT_VISITE>();
             List<VISITEUR> lv = ChargerVisiteurByRegion(code);

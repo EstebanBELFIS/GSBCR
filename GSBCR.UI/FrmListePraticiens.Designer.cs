@@ -35,13 +35,14 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.bsPraticien = new System.Windows.Forms.BindingSource(this.components);
             this.gsb_visite_groupe1DataSet = new GSBCR.UI.gsb_visite_groupe1DataSet();
+            this.btnRapport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsPraticien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gsb_visite_groupe1DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // ucPratictien1
             // 
-            this.ucPratictien1.Location = new System.Drawing.Point(12, 92);
+            this.ucPratictien1.Location = new System.Drawing.Point(12, 82);
             this.ucPratictien1.Name = "ucPratictien1";
             this.ucPratictien1.pRATICIEN = null;
             this.ucPratictien1.Size = new System.Drawing.Size(568, 356);
@@ -86,11 +87,23 @@
             this.gsb_visite_groupe1DataSet.DataSetName = "gsb_visite_groupe1DataSet";
             this.gsb_visite_groupe1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // btnRapport
+            // 
+            this.btnRapport.Location = new System.Drawing.Point(83, 415);
+            this.btnRapport.Name = "btnRapport";
+            this.btnRapport.Size = new System.Drawing.Size(262, 23);
+            this.btnRapport.TabIndex = 9;
+            this.btnRapport.Text = "Afficher mes rapports visites avec ce praticien";
+            this.btnRapport.UseVisualStyleBackColor = true;
+            this.btnRapport.Visible = false;
+            this.btnRapport.Click += new System.EventHandler(this.btnRapport_Click);
+            // 
             // FrmListePraticiens
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(461, 450);
+            this.Controls.Add(this.btnRapport);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.cbxPratictien);
             this.Controls.Add(this.label2);
@@ -112,5 +125,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.BindingSource bsPraticien;
         private gsb_visite_groupe1DataSet gsb_visite_groupe1DataSet;
+        private System.Windows.Forms.Button btnRapport;
     }
 }
