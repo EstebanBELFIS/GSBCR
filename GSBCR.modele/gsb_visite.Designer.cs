@@ -1,4 +1,4 @@
-﻿// La génération de code T4 est activée pour le modèle 'E:\Cours\OneDrive- Lycée CARRIAT BTS SIO\OneDrive - Lycée CARRIAT BTS SIO\Cours\Visual Studio\Bordel\GSBCR\GSBCR.modele\gsb_visite.edmx'. 
+﻿// La génération de code T4 est activée pour le modèle 'F:\Visual Studio Projects\GSBCR\GSBCR.modele\gsb_visite.edmx'. 
 // Pour activer la génération de code héritée, définissez la valeur de la propriété
 // du concepteur 'Stratégie de génération de code' sur 'ObjectContext hérité'. Cette propriété est disponible dans la fenêtre Propriétés lorsque le modèle
 //  est ouvert dans le concepteur.

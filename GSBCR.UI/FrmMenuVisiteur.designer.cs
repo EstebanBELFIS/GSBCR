@@ -206,6 +206,7 @@
             this.listeDesVisiteursToolStripMenuItem.Name = "listeDesVisiteursToolStripMenuItem";
             this.listeDesVisiteursToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.listeDesVisiteursToolStripMenuItem.Text = "Liste des visiteurs";
+            this.listeDesVisiteursToolStripMenuItem.Click += new System.EventHandler(this.listeDesVisiteursToolStripMenuItem_Click);
             // 
             // monSecteurToolStripMenuItem
             // 

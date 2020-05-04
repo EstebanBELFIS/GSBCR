@@ -1,6 +1,6 @@
 ﻿namespace GSBCR.UI
 {
-    partial class FrmRapportEnCours
+    partial class FrmRapportConsulte
     {
         /// <summary>
         /// Required designer variable.
@@ -34,29 +34,29 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnQuitter = new System.Windows.Forms.Button();
-            this.btnNouveau = new System.Windows.Forms.Button();
             this.dgvRapportEnCours = new System.Windows.Forms.DataGridView();
             this.bsRapportEnCours = new System.Windows.Forms.BindingSource(this.components);
-            this.leVisiteurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lePraticienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lesEchantillonsOffertsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.leMotifVisiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.leMedicament2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.leMedicament1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rAPMED2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rAPMED1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rAPPNOMREMPLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rAPNOMREMPLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rAPMOTIFAUTREDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rAPMOTIFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rAPBILANDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rAPCONFIANCEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rAPETATDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rAPDATVISITDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rAPDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rAPPRANUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rAPNUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAPMATRICULEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rAPNUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rAPPRANUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rAPDATVISITDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rAPETATDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rAPCONFIANCEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rAPBILANDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rAPMOTIFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rAPNOMREMPLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rAPPNOMREMPLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rAPMED1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rAPMED2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.leMedicament1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.leMedicament2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.leMotifVisiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lesEchantillonsOffertsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lePraticienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.leVisiteurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RAP_NOMREMPL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RAP_PNOMREMPL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RAP_CONFIANCE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -78,7 +78,6 @@
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.btnQuitter);
-            this.splitContainer1.Panel1.Controls.Add(this.btnNouveau);
             // 
             // splitContainer1.Panel2
             // 
@@ -109,11 +108,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(301, 33);
+            this.label1.Location = new System.Drawing.Point(267, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 20);
+            this.label1.Size = new System.Drawing.Size(322, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Vos rapports en cours";
+            this.label1.Text = "Les rapports consultés du visiteur";
             // 
             // btnQuitter
             // 
@@ -125,16 +124,6 @@
             this.btnQuitter.UseVisualStyleBackColor = true;
             this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
             // 
-            // btnNouveau
-            // 
-            this.btnNouveau.Location = new System.Drawing.Point(605, 62);
-            this.btnNouveau.Name = "btnNouveau";
-            this.btnNouveau.Size = new System.Drawing.Size(75, 23);
-            this.btnNouveau.TabIndex = 0;
-            this.btnNouveau.Text = "Nouveau";
-            this.btnNouveau.UseVisualStyleBackColor = true;
-            this.btnNouveau.Click += new System.EventHandler(this.btnNouveau_Click);
-            // 
             // dgvRapportEnCours
             // 
             this.dgvRapportEnCours.AllowUserToAddRows = false;
@@ -145,13 +134,11 @@
             this.rAPMATRICULEDataGridViewTextBoxColumn,
             this.rAPNUMDataGridViewTextBoxColumn,
             this.rAPPRANUMDataGridViewTextBoxColumn,
-            this.rAPDATEDataGridViewTextBoxColumn,
             this.rAPDATVISITDataGridViewTextBoxColumn,
             this.rAPETATDataGridViewTextBoxColumn,
             this.rAPCONFIANCEDataGridViewTextBoxColumn,
             this.rAPBILANDataGridViewTextBoxColumn,
             this.rAPMOTIFDataGridViewTextBoxColumn,
-            this.rAPMOTIFAUTREDataGridViewTextBoxColumn,
             this.rAPNOMREMPLDataGridViewTextBoxColumn,
             this.rAPPNOMREMPLDataGridViewTextBoxColumn,
             this.rAPMED1DataGridViewTextBoxColumn,
@@ -161,7 +148,10 @@
             this.leMotifVisiteDataGridViewTextBoxColumn,
             this.lesEchantillonsOffertsDataGridViewTextBoxColumn,
             this.lePraticienDataGridViewTextBoxColumn,
-            this.leVisiteurDataGridViewTextBoxColumn});
+            this.leVisiteurDataGridViewTextBoxColumn,
+            this.RAP_NOMREMPL,
+            this.RAP_PNOMREMPL,
+            this.RAP_CONFIANCE});
             this.dgvRapportEnCours.DataSource = this.bsRapportEnCours;
             this.dgvRapportEnCours.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRapportEnCours.Location = new System.Drawing.Point(0, 0);
@@ -174,118 +164,18 @@
             // 
             this.bsRapportEnCours.DataSource = typeof(GSBCR.modele.RAPPORT_VISITE);
             // 
-            // leVisiteurDataGridViewTextBoxColumn
+            // rAPMATRICULEDataGridViewTextBoxColumn
             // 
-            this.leVisiteurDataGridViewTextBoxColumn.DataPropertyName = "LeVisiteur";
-            this.leVisiteurDataGridViewTextBoxColumn.HeaderText = "LeVisiteur";
-            this.leVisiteurDataGridViewTextBoxColumn.Name = "leVisiteurDataGridViewTextBoxColumn";
-            this.leVisiteurDataGridViewTextBoxColumn.Visible = false;
+            this.rAPMATRICULEDataGridViewTextBoxColumn.DataPropertyName = "RAP_MATRICULE";
+            this.rAPMATRICULEDataGridViewTextBoxColumn.HeaderText = "RAP_MATRICULE";
+            this.rAPMATRICULEDataGridViewTextBoxColumn.Name = "rAPMATRICULEDataGridViewTextBoxColumn";
+            this.rAPMATRICULEDataGridViewTextBoxColumn.Visible = false;
             // 
-            // lePraticienDataGridViewTextBoxColumn
+            // rAPNUMDataGridViewTextBoxColumn
             // 
-            this.lePraticienDataGridViewTextBoxColumn.DataPropertyName = "LePraticien";
-            this.lePraticienDataGridViewTextBoxColumn.HeaderText = "LePraticien";
-            this.lePraticienDataGridViewTextBoxColumn.Name = "lePraticienDataGridViewTextBoxColumn";
-            this.lePraticienDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // lesEchantillonsOffertsDataGridViewTextBoxColumn
-            // 
-            this.lesEchantillonsOffertsDataGridViewTextBoxColumn.DataPropertyName = "LesEchantillonsOfferts";
-            this.lesEchantillonsOffertsDataGridViewTextBoxColumn.HeaderText = "LesEchantillonsOfferts";
-            this.lesEchantillonsOffertsDataGridViewTextBoxColumn.Name = "lesEchantillonsOffertsDataGridViewTextBoxColumn";
-            this.lesEchantillonsOffertsDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // leMotifVisiteDataGridViewTextBoxColumn
-            // 
-            this.leMotifVisiteDataGridViewTextBoxColumn.DataPropertyName = "LeMotifVisite";
-            this.leMotifVisiteDataGridViewTextBoxColumn.HeaderText = "LeMotifVisite";
-            this.leMotifVisiteDataGridViewTextBoxColumn.Name = "leMotifVisiteDataGridViewTextBoxColumn";
-            this.leMotifVisiteDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // leMedicament2DataGridViewTextBoxColumn
-            // 
-            this.leMedicament2DataGridViewTextBoxColumn.DataPropertyName = "LeMedicament2";
-            this.leMedicament2DataGridViewTextBoxColumn.HeaderText = "LeMedicament2";
-            this.leMedicament2DataGridViewTextBoxColumn.Name = "leMedicament2DataGridViewTextBoxColumn";
-            this.leMedicament2DataGridViewTextBoxColumn.Visible = false;
-            // 
-            // leMedicament1DataGridViewTextBoxColumn
-            // 
-            this.leMedicament1DataGridViewTextBoxColumn.DataPropertyName = "leMedicament1";
-            this.leMedicament1DataGridViewTextBoxColumn.HeaderText = "leMedicament1";
-            this.leMedicament1DataGridViewTextBoxColumn.Name = "leMedicament1DataGridViewTextBoxColumn";
-            this.leMedicament1DataGridViewTextBoxColumn.Visible = false;
-            // 
-            // rAPMED2DataGridViewTextBoxColumn
-            // 
-            this.rAPMED2DataGridViewTextBoxColumn.DataPropertyName = "RAP_MED2";
-            this.rAPMED2DataGridViewTextBoxColumn.HeaderText = "RAP_MED2";
-            this.rAPMED2DataGridViewTextBoxColumn.Name = "rAPMED2DataGridViewTextBoxColumn";
-            // 
-            // rAPMED1DataGridViewTextBoxColumn
-            // 
-            this.rAPMED1DataGridViewTextBoxColumn.DataPropertyName = "RAP_MED1";
-            this.rAPMED1DataGridViewTextBoxColumn.HeaderText = "RAP_MED1";
-            this.rAPMED1DataGridViewTextBoxColumn.Name = "rAPMED1DataGridViewTextBoxColumn";
-            // 
-            // rAPPNOMREMPLDataGridViewTextBoxColumn
-            // 
-            this.rAPPNOMREMPLDataGridViewTextBoxColumn.DataPropertyName = "RAP_PNOMREMPL";
-            this.rAPPNOMREMPLDataGridViewTextBoxColumn.HeaderText = "RAP_PNOMREMPL";
-            this.rAPPNOMREMPLDataGridViewTextBoxColumn.Name = "rAPPNOMREMPLDataGridViewTextBoxColumn";
-            this.rAPPNOMREMPLDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // rAPNOMREMPLDataGridViewTextBoxColumn
-            // 
-            this.rAPNOMREMPLDataGridViewTextBoxColumn.DataPropertyName = "RAP_NOMREMPL";
-            this.rAPNOMREMPLDataGridViewTextBoxColumn.HeaderText = "RAP_NOMREMPL";
-            this.rAPNOMREMPLDataGridViewTextBoxColumn.Name = "rAPNOMREMPLDataGridViewTextBoxColumn";
-            this.rAPNOMREMPLDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // rAPMOTIFAUTREDataGridViewTextBoxColumn
-            // 
-            this.rAPMOTIFAUTREDataGridViewTextBoxColumn.DataPropertyName = "RAP_MOTIFAUTRE";
-            this.rAPMOTIFAUTREDataGridViewTextBoxColumn.HeaderText = "RAP_MOTIFAUTRE";
-            this.rAPMOTIFAUTREDataGridViewTextBoxColumn.Name = "rAPMOTIFAUTREDataGridViewTextBoxColumn";
-            // 
-            // rAPMOTIFDataGridViewTextBoxColumn
-            // 
-            this.rAPMOTIFDataGridViewTextBoxColumn.DataPropertyName = "RAP_MOTIF";
-            this.rAPMOTIFDataGridViewTextBoxColumn.HeaderText = "RAP_MOTIF";
-            this.rAPMOTIFDataGridViewTextBoxColumn.Name = "rAPMOTIFDataGridViewTextBoxColumn";
-            // 
-            // rAPBILANDataGridViewTextBoxColumn
-            // 
-            this.rAPBILANDataGridViewTextBoxColumn.DataPropertyName = "RAP_BILAN";
-            this.rAPBILANDataGridViewTextBoxColumn.HeaderText = "RAP_BILAN";
-            this.rAPBILANDataGridViewTextBoxColumn.Name = "rAPBILANDataGridViewTextBoxColumn";
-            this.rAPBILANDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // rAPCONFIANCEDataGridViewTextBoxColumn
-            // 
-            this.rAPCONFIANCEDataGridViewTextBoxColumn.DataPropertyName = "RAP_CONFIANCE";
-            this.rAPCONFIANCEDataGridViewTextBoxColumn.HeaderText = "RAP_CONFIANCE";
-            this.rAPCONFIANCEDataGridViewTextBoxColumn.Name = "rAPCONFIANCEDataGridViewTextBoxColumn";
-            this.rAPCONFIANCEDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // rAPETATDataGridViewTextBoxColumn
-            // 
-            this.rAPETATDataGridViewTextBoxColumn.DataPropertyName = "RAP_ETAT";
-            this.rAPETATDataGridViewTextBoxColumn.HeaderText = "RAP_ETAT";
-            this.rAPETATDataGridViewTextBoxColumn.Name = "rAPETATDataGridViewTextBoxColumn";
-            this.rAPETATDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // rAPDATVISITDataGridViewTextBoxColumn
-            // 
-            this.rAPDATVISITDataGridViewTextBoxColumn.DataPropertyName = "RAP_DATVISIT";
-            this.rAPDATVISITDataGridViewTextBoxColumn.HeaderText = "RAP_DATVISIT";
-            this.rAPDATVISITDataGridViewTextBoxColumn.Name = "rAPDATVISITDataGridViewTextBoxColumn";
-            // 
-            // rAPDATEDataGridViewTextBoxColumn
-            // 
-            this.rAPDATEDataGridViewTextBoxColumn.DataPropertyName = "RAP_DATE";
-            this.rAPDATEDataGridViewTextBoxColumn.HeaderText = "RAP_DATE";
-            this.rAPDATEDataGridViewTextBoxColumn.Name = "rAPDATEDataGridViewTextBoxColumn";
+            this.rAPNUMDataGridViewTextBoxColumn.DataPropertyName = "RAP_NUM";
+            this.rAPNUMDataGridViewTextBoxColumn.HeaderText = "RAP_NUM";
+            this.rAPNUMDataGridViewTextBoxColumn.Name = "rAPNUMDataGridViewTextBoxColumn";
             // 
             // rAPPRANUMDataGridViewTextBoxColumn
             // 
@@ -294,26 +184,132 @@
             this.rAPPRANUMDataGridViewTextBoxColumn.Name = "rAPPRANUMDataGridViewTextBoxColumn";
             this.rAPPRANUMDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // rAPNUMDataGridViewTextBoxColumn
+            // rAPDATVISITDataGridViewTextBoxColumn
             // 
-            this.rAPNUMDataGridViewTextBoxColumn.DataPropertyName = "RAP_NUM";
-            this.rAPNUMDataGridViewTextBoxColumn.HeaderText = "RAP_NUM";
-            this.rAPNUMDataGridViewTextBoxColumn.Name = "rAPNUMDataGridViewTextBoxColumn";
+            this.rAPDATVISITDataGridViewTextBoxColumn.DataPropertyName = "RAP_DATVISIT";
+            this.rAPDATVISITDataGridViewTextBoxColumn.HeaderText = "RAP_DATVISIT";
+            this.rAPDATVISITDataGridViewTextBoxColumn.Name = "rAPDATVISITDataGridViewTextBoxColumn";
             // 
-            // rAPMATRICULEDataGridViewTextBoxColumn
+            // rAPETATDataGridViewTextBoxColumn
             // 
-            this.rAPMATRICULEDataGridViewTextBoxColumn.DataPropertyName = "RAP_MATRICULE";
-            this.rAPMATRICULEDataGridViewTextBoxColumn.HeaderText = "RAP_MATRICULE";
-            this.rAPMATRICULEDataGridViewTextBoxColumn.Name = "rAPMATRICULEDataGridViewTextBoxColumn";
-            this.rAPMATRICULEDataGridViewTextBoxColumn.Visible = false;
+            this.rAPETATDataGridViewTextBoxColumn.DataPropertyName = "RAP_ETAT";
+            this.rAPETATDataGridViewTextBoxColumn.HeaderText = "RAP_ETAT";
+            this.rAPETATDataGridViewTextBoxColumn.Name = "rAPETATDataGridViewTextBoxColumn";
+            this.rAPETATDataGridViewTextBoxColumn.Visible = false;
             // 
-            // FrmRapportEnCours
+            // rAPCONFIANCEDataGridViewTextBoxColumn
+            // 
+            this.rAPCONFIANCEDataGridViewTextBoxColumn.DataPropertyName = "RAP_CONFIANCE";
+            this.rAPCONFIANCEDataGridViewTextBoxColumn.HeaderText = "RAP_CONFIANCE";
+            this.rAPCONFIANCEDataGridViewTextBoxColumn.Name = "rAPCONFIANCEDataGridViewTextBoxColumn";
+            this.rAPCONFIANCEDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // rAPBILANDataGridViewTextBoxColumn
+            // 
+            this.rAPBILANDataGridViewTextBoxColumn.DataPropertyName = "RAP_BILAN";
+            this.rAPBILANDataGridViewTextBoxColumn.HeaderText = "RAP_BILAN";
+            this.rAPBILANDataGridViewTextBoxColumn.Name = "rAPBILANDataGridViewTextBoxColumn";
+            this.rAPBILANDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // rAPMOTIFDataGridViewTextBoxColumn
+            // 
+            this.rAPMOTIFDataGridViewTextBoxColumn.DataPropertyName = "RAP_MOTIF";
+            this.rAPMOTIFDataGridViewTextBoxColumn.HeaderText = "RAP_MOTIF";
+            this.rAPMOTIFDataGridViewTextBoxColumn.Name = "rAPMOTIFDataGridViewTextBoxColumn";
+            // 
+            // rAPNOMREMPLDataGridViewTextBoxColumn
+            // 
+            this.rAPNOMREMPLDataGridViewTextBoxColumn.DataPropertyName = "RAP_NOMREMPL";
+            this.rAPNOMREMPLDataGridViewTextBoxColumn.HeaderText = "RAP_NOMREMPL";
+            this.rAPNOMREMPLDataGridViewTextBoxColumn.Name = "rAPNOMREMPLDataGridViewTextBoxColumn";
+            this.rAPNOMREMPLDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // rAPPNOMREMPLDataGridViewTextBoxColumn
+            // 
+            this.rAPPNOMREMPLDataGridViewTextBoxColumn.DataPropertyName = "RAP_PNOMREMPL";
+            this.rAPPNOMREMPLDataGridViewTextBoxColumn.HeaderText = "RAP_PNOMREMPL";
+            this.rAPPNOMREMPLDataGridViewTextBoxColumn.Name = "rAPPNOMREMPLDataGridViewTextBoxColumn";
+            this.rAPPNOMREMPLDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // rAPMED1DataGridViewTextBoxColumn
+            // 
+            this.rAPMED1DataGridViewTextBoxColumn.DataPropertyName = "RAP_MED1";
+            this.rAPMED1DataGridViewTextBoxColumn.HeaderText = "RAP_MED1";
+            this.rAPMED1DataGridViewTextBoxColumn.Name = "rAPMED1DataGridViewTextBoxColumn";
+            // 
+            // rAPMED2DataGridViewTextBoxColumn
+            // 
+            this.rAPMED2DataGridViewTextBoxColumn.DataPropertyName = "RAP_MED2";
+            this.rAPMED2DataGridViewTextBoxColumn.HeaderText = "RAP_MED2";
+            this.rAPMED2DataGridViewTextBoxColumn.Name = "rAPMED2DataGridViewTextBoxColumn";
+            // 
+            // leMedicament1DataGridViewTextBoxColumn
+            // 
+            this.leMedicament1DataGridViewTextBoxColumn.DataPropertyName = "leMedicament1";
+            this.leMedicament1DataGridViewTextBoxColumn.HeaderText = "leMedicament1";
+            this.leMedicament1DataGridViewTextBoxColumn.Name = "leMedicament1DataGridViewTextBoxColumn";
+            this.leMedicament1DataGridViewTextBoxColumn.Visible = false;
+            // 
+            // leMedicament2DataGridViewTextBoxColumn
+            // 
+            this.leMedicament2DataGridViewTextBoxColumn.DataPropertyName = "LeMedicament2";
+            this.leMedicament2DataGridViewTextBoxColumn.HeaderText = "LeMedicament2";
+            this.leMedicament2DataGridViewTextBoxColumn.Name = "leMedicament2DataGridViewTextBoxColumn";
+            this.leMedicament2DataGridViewTextBoxColumn.Visible = false;
+            // 
+            // leMotifVisiteDataGridViewTextBoxColumn
+            // 
+            this.leMotifVisiteDataGridViewTextBoxColumn.DataPropertyName = "LeMotifVisite";
+            this.leMotifVisiteDataGridViewTextBoxColumn.HeaderText = "LeMotifVisite";
+            this.leMotifVisiteDataGridViewTextBoxColumn.Name = "leMotifVisiteDataGridViewTextBoxColumn";
+            this.leMotifVisiteDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // lesEchantillonsOffertsDataGridViewTextBoxColumn
+            // 
+            this.lesEchantillonsOffertsDataGridViewTextBoxColumn.DataPropertyName = "LesEchantillonsOfferts";
+            this.lesEchantillonsOffertsDataGridViewTextBoxColumn.HeaderText = "LesEchantillonsOfferts";
+            this.lesEchantillonsOffertsDataGridViewTextBoxColumn.Name = "lesEchantillonsOffertsDataGridViewTextBoxColumn";
+            this.lesEchantillonsOffertsDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // lePraticienDataGridViewTextBoxColumn
+            // 
+            this.lePraticienDataGridViewTextBoxColumn.DataPropertyName = "LePraticien";
+            this.lePraticienDataGridViewTextBoxColumn.HeaderText = "LePraticien";
+            this.lePraticienDataGridViewTextBoxColumn.Name = "lePraticienDataGridViewTextBoxColumn";
+            this.lePraticienDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // leVisiteurDataGridViewTextBoxColumn
+            // 
+            this.leVisiteurDataGridViewTextBoxColumn.DataPropertyName = "LeVisiteur";
+            this.leVisiteurDataGridViewTextBoxColumn.HeaderText = "LeVisiteur";
+            this.leVisiteurDataGridViewTextBoxColumn.Name = "leVisiteurDataGridViewTextBoxColumn";
+            this.leVisiteurDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // RAP_NOMREMPL
+            // 
+            this.RAP_NOMREMPL.DataPropertyName = "RAP_NOMREMPL";
+            this.RAP_NOMREMPL.HeaderText = "RAP_NOMREMPL";
+            this.RAP_NOMREMPL.Name = "RAP_NOMREMPL";
+            // 
+            // RAP_PNOMREMPL
+            // 
+            this.RAP_PNOMREMPL.DataPropertyName = "RAP_PNOMREMPL";
+            this.RAP_PNOMREMPL.HeaderText = "RAP_PNOMREMPL";
+            this.RAP_PNOMREMPL.Name = "RAP_PNOMREMPL";
+            // 
+            // RAP_CONFIANCE
+            // 
+            this.RAP_CONFIANCE.DataPropertyName = "RAP_CONFIANCE";
+            this.RAP_CONFIANCE.HeaderText = "RAP_CONFIANCE";
+            this.RAP_CONFIANCE.Name = "RAP_CONFIANCE";
+            // 
+            // FrmRapportConsulte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(853, 411);
             this.Controls.Add(this.splitContainer1);
-            this.Name = "FrmRapportEnCours";
+            this.Name = "FrmRapportConsulte";
             this.Text = "FrmRapportEnCours";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
@@ -331,7 +327,6 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnQuitter;
-        private System.Windows.Forms.Button btnNouveau;
         private System.Windows.Forms.DataGridView dgvRapportEnCours;
         private System.Windows.Forms.BindingSource bsRapportEnCours;
         private System.Windows.Forms.Label label3;
@@ -339,13 +334,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPMATRICULEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPNUMDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPPRANUMDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rAPDATEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPDATVISITDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPETATDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPCONFIANCEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPBILANDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPMOTIFDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rAPMOTIFAUTREDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPNOMREMPLDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPPNOMREMPLDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPMED1DataGridViewTextBoxColumn;
@@ -356,5 +349,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn lesEchantillonsOffertsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lePraticienDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn leVisiteurDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RAP_NOMREMPL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RAP_PNOMREMPL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RAP_CONFIANCE;
     }
 }

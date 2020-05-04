@@ -107,6 +107,12 @@
     <Compile Include="FrmModifInfosPerso.Designer.cs">
       <DependentUpon>FrmModifInfosPerso.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRapportConsulte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRapportConsulte.Designer.cs">
+      <DependentUpon>FrmRapportConsulte.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRapportEnCours.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,15 @@
     </Compile>
     <Compile Include="FrmSaisir.designer.cs">
       <DependentUpon>FrmSaisir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVoirVisiteurEquipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVoirVisiteurEquipe.Designer.cs">
+      <DependentUpon>FrmVoirVisiteurEquipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gsb_visite_groupe1DataSet.cs">
+      <DependentUpon>gsb_visite_groupe1DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="gsb_visite_groupe1DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -144,11 +159,17 @@
     <EmbeddedResource Include="FrmModifInfosPerso.resx">
       <DependentUpon>FrmModifInfosPerso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmRapportConsulte.resx">
+      <DependentUpon>FrmRapportConsulte.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmRapportEnCours.resx">
       <DependentUpon>FrmRapportEnCours.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSaisir.resx">
       <DependentUpon>FrmSaisir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVoirVisiteurEquipe.resx">
+      <DependentUpon>FrmVoirVisiteurEquipe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -175,6 +196,8 @@
     <None Include="Properties\DataSources\GSBCR.BLL.Manager.datasource" />
     <None Include="Properties\DataSources\GSBCR.DC.RapportVisite.datasource" />
     <None Include="Properties\DataSources\GSBCR.modele.RAPPORT_VISITE.datasource" />
+    <None Include="Properties\DataSources\GSBCR.modele.VAFFECTATION.datasource" />
+    <None Include="Properties\DataSources\GSBCR.modele.VISITEUR.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

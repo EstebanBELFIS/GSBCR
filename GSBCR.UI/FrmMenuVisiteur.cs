@@ -113,5 +113,27 @@ namespace GSBCR.UI
             FrmModifInfosPerso i = new FrmModifInfosPerso(leVisiteur);
             i.ShowDialog();
         }
+
+        private void listeDesVisiteursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<VISITEUR> listeVisiteur = null;
+            try
+            {
+                listeVisiteur = DelegueManager.ChargerVisiteurByRegion(leProfil.REG_CODE);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            if (listeVisiteur != null && listeVisiteur.Count != 0)
+            {
+                FrmVoirVisiteurEquipe v = new FrmVoirVisiteurEquipe(leVisiteur, listeVisiteur, leProfil);
+                v.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Aucun visiteur dans votre équipe", "Gestion Visiteurs de votre équipe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

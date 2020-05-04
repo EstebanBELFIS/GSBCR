@@ -5,6 +5,8 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="GSB_VisiteModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'gsb_visite_groupe1.dbo.FAMILLE' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
         <EntityType Name="FAMILLE">
           <Key>
             <PropertyRef Name="FAM_CODE" />
@@ -12,9 +14,12 @@
           <Property Name="FAM_CODE" Type="nvarchar" MaxLength="3" Nullable="false" />
           <Property Name="FAM_LIBELLE" Type="nvarchar" MaxLength="80" />
         </EntityType>
+        <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'gsb_visite_groupe1.dbo.MEDICAMENT' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
         <EntityType Name="MEDICAMENT">
           <Key>
             <PropertyRef Name="MED_DEPOTLEGAL" />
+            
           </Key>
           <Property Name="MED_DEPOTLEGAL" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="MED_NOMCOMMERCIAL" Type="nvarchar" MaxLength="25" />
@@ -24,6 +29,8 @@
           <Property Name="MED_CONTREINDIC" Type="nvarchar" MaxLength="255" />
           <Property Name="MED_PRIXECHANTILLON" Type="real" />
         </EntityType>
+        <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'gsb_visite_groupe1.dbo.MOTIF_VISITE' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
         <EntityType Name="MOTIF_VISITE">
           <Key>
             <PropertyRef Name="MOT_CODE" />
@@ -31,6 +38,8 @@
           <Property Name="MOT_CODE" Type="nchar" MaxLength="2" Nullable="false" />
           <Property Name="MOT_LIBEL" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'gsb_visite_groupe1.dbo.OFFRIR' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
         <EntityType Name="OFFRIR">
           <Key>
             <PropertyRef Name="VIS_MATRICULE" />
@@ -42,6 +51,8 @@
           <Property Name="MED_DEPOTLEGAL" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="OFF_QTE" Type="smallint" />
         </EntityType>
+        <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'gsb_visite_groupe1.dbo.POSSEDER' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
         <EntityType Name="POSSEDER">
           <Key>
             <PropertyRef Name="PRA_NUM" />
@@ -52,9 +63,12 @@
           <Property Name="POS_DIPLOME" Type="nvarchar" MaxLength="10" />
           <Property Name="POS_COEFPRESCRIPTION" Type="real" />
         </EntityType>
+        <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'gsb_visite_groupe1.dbo.PRATICIEN' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
         <EntityType Name="PRATICIEN">
           <Key>
             <PropertyRef Name="PRA_NUM" />
+            
           </Key>
           <Property Name="PRA_NUM" Type="smallint" Nullable="false" />
           <Property Name="PRA_NOM" Type="nvarchar" MaxLength="25" />
@@ -65,10 +79,19 @@
           <Property Name="PRA_COEFNOTORIETE" Type="real" />
           <Property Name="TYP_CODE" Type="nvarchar" MaxLength="3" Nullable="false" />
         </EntityType>
+        <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'gsb_visite_groupe1.dbo.RAPPORT_VISITE' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
         <EntityType Name="RAPPORT_VISITE">
           <Key>
             <PropertyRef Name="RAP_MATRICULE" />
             <PropertyRef Name="RAP_NUM" />
+            
+            
+            
+            
+            
+            
+            
           </Key>
           <Property Name="RAP_MATRICULE" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="RAP_NUM" Type="int" Nullable="false" />
@@ -85,14 +108,19 @@
           <Property Name="RAP_MED1" Type="nvarchar" MaxLength="10" />
           <Property Name="RAP_MED2" Type="nvarchar" MaxLength="10" />
         </EntityType>
+        <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'gsb_visite_groupe1.dbo.REGION' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
         <EntityType Name="REGION">
           <Key>
             <PropertyRef Name="REG_CODE" />
+            
           </Key>
           <Property Name="REG_CODE" Type="nvarchar" MaxLength="2" Nullable="false" />
           <Property Name="SEC_CODE" Type="nvarchar" MaxLength="1" Nullable="false" />
           <Property Name="REG_NOM" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'gsb_visite_groupe1.dbo.SECTEUR' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
         <EntityType Name="SECTEUR">
           <Key>
             <PropertyRef Name="SEC_CODE" />
@@ -100,6 +128,8 @@
           <Property Name="SEC_CODE" Type="nvarchar" MaxLength="1" Nullable="false" />
           <Property Name="SEC_LIBELLE" Type="nvarchar" MaxLength="15" />
         </EntityType>
+        <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'gsb_visite_groupe1.dbo.SPECIALITE' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
         <EntityType Name="SPECIALITE">
           <Key>
             <PropertyRef Name="SPE_CODE" />
@@ -107,7 +137,7 @@
           <Property Name="SPE_CODE" Type="nvarchar" MaxLength="5" Nullable="false" />
           <Property Name="SPE_LIBELLE" Type="nvarchar" MaxLength="150" />
         </EntityType>
-        <EntityType Name="sysdiagrams">
+		<EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
           </Key>
@@ -117,17 +147,22 @@
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
+        <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'gsb_visite_groupe1.dbo.TRAVAILLER' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
         <EntityType Name="TRAVAILLER">
           <Key>
             <PropertyRef Name="VIS_MATRICULE" />
             <PropertyRef Name="JJMMAA" />
             <PropertyRef Name="REG_CODE" />
+            
           </Key>
           <Property Name="VIS_MATRICULE" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="JJMMAA" Type="datetime" Nullable="false" />
           <Property Name="REG_CODE" Type="nvarchar" MaxLength="2" Nullable="false" />
-          <Property Name="TRA_ROLE" Type="nvarchar" MaxLength="11" />
+          <Property Name="TRA_ROLE" Type="nvarchar" MaxLength="11" Nullable="false" />
         </EntityType>
+        <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'gsb_visite_groupe1.dbo.TYPE_PRATICIEN' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
         <EntityType Name="TYPE_PRATICIEN">
           <Key>
             <PropertyRef Name="TYP_CODE" />
@@ -136,218 +171,53 @@
           <Property Name="TYP_LIBELLE" Type="nvarchar" MaxLength="25" />
           <Property Name="TYP_LIEU" Type="nvarchar" MaxLength="35" />
         </EntityType>
+        <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'gsb_visite_groupe1.dbo.VISITEUR' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
         <EntityType Name="VISITEUR">
           <Key>
             <PropertyRef Name="VIS_MATRICULE" />
+            
+            
+            
+            
+            
+            
+            
+            
           </Key>
           <Property Name="VIS_MATRICULE" Type="nvarchar" MaxLength="10" Nullable="false" />
-          <Property Name="VIS_NOM" Type="nvarchar" MaxLength="25" />
-          <Property Name="Vis_PRENOM" Type="nvarchar" MaxLength="50" />
-          <Property Name="VIS_ADRESSE" Type="nvarchar" MaxLength="50" />
-          <Property Name="VIS_CP" Type="nvarchar" MaxLength="5" />
-          <Property Name="VIS_VILLE" Type="nvarchar" MaxLength="30" />
-          <Property Name="VIS_DATEEMBAUCHE" Type="datetime" />
+          <Property Name="VIS_NOM" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="Vis_PRENOM" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="VIS_ADRESSE" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="VIS_CP" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="VIS_VILLE" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="VIS_DATEEMBAUCHE" Type="datetime" Nullable="false" />
           <Property Name="SEC_CODE" Type="nvarchar" MaxLength="1" />
           <Property Name="LAB_CODE" Type="nvarchar" MaxLength="2" Nullable="false" />
-          <Property Name="vis_mdp" Type="char" MaxLength="8" />
+          <Property Name="vis_mdp" Type="char" MaxLength="8" Nullable="false" />
         </EntityType>
         <!--Erreurs détectées durant la génération :
-avertissement 6002: La table/vue 'GSB_Visite.dbo.VAFFECTATION' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+avertissement 6002: La table/vue 'gsb_visite_groupe1.dbo.VAFFECTATION' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
         <EntityType Name="VAFFECTATION">
           <Key>
             <PropertyRef Name="VIS_MATRICULE" />
             <PropertyRef Name="JJMMAA" />
             <PropertyRef Name="REG_CODE" />
+            
+            <PropertyRef Name="Vis_PRENOM" />
+            <PropertyRef Name="VIS_NOM" />
+            <PropertyRef Name="VIS_DATEEMBAUCHE" />
           </Key>
           <Property Name="VIS_MATRICULE" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="JJMMAA" Type="datetime" Nullable="false" />
           <Property Name="REG_CODE" Type="nvarchar" MaxLength="2" Nullable="false" />
-          <Property Name="TRA_ROLE" Type="nvarchar" MaxLength="11" />
+          <Property Name="TRA_ROLE" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="Vis_PRENOM" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="VIS_NOM" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="VIS_DATEEMBAUCHE" Type="datetime" Nullable="false" />
         </EntityType>
-        <Association Name="MEDICAMENT_FK00">
-          <End Role="FAMILLE" Type="Self.FAMILLE" Multiplicity="1" />
-          <End Role="MEDICAMENT" Type="Self.MEDICAMENT" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="FAMILLE">
-              <PropertyRef Name="FAM_CODE" />
-            </Principal>
-            <Dependent Role="MEDICAMENT">
-              <PropertyRef Name="FAM_CODE" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="OFFRIR_FK00">
-          <End Role="MEDICAMENT" Type="Self.MEDICAMENT" Multiplicity="1" />
-          <End Role="OFFRIR" Type="Self.OFFRIR" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="MEDICAMENT">
-              <PropertyRef Name="MED_DEPOTLEGAL" />
-            </Principal>
-            <Dependent Role="OFFRIR">
-              <PropertyRef Name="MED_DEPOTLEGAL" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="OFFRIR_FK01">
-          <End Role="RAPPORT_VISITE" Type="Self.RAPPORT_VISITE" Multiplicity="1" />
-          <End Role="OFFRIR" Type="Self.OFFRIR" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="RAPPORT_VISITE">
-              <PropertyRef Name="RAP_MATRICULE" />
-              <PropertyRef Name="RAP_NUM" />
-            </Principal>
-            <Dependent Role="OFFRIR">
-              <PropertyRef Name="VIS_MATRICULE" />
-              <PropertyRef Name="RAP_NUM" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="POSSEDER_FK00">
-          <End Role="SPECIALITE" Type="Self.SPECIALITE" Multiplicity="1" />
-          <End Role="POSSEDER" Type="Self.POSSEDER" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="SPECIALITE">
-              <PropertyRef Name="SPE_CODE" />
-            </Principal>
-            <Dependent Role="POSSEDER">
-              <PropertyRef Name="SPE_CODE" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="POSSEDER_FK01">
-          <End Role="PRATICIEN" Type="Self.PRATICIEN" Multiplicity="1" />
-          <End Role="POSSEDER" Type="Self.POSSEDER" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PRATICIEN">
-              <PropertyRef Name="PRA_NUM" />
-            </Principal>
-            <Dependent Role="POSSEDER">
-              <PropertyRef Name="PRA_NUM" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="PRATICIEN_FK00">
-          <End Role="TYPE_PRATICIEN" Type="Self.TYPE_PRATICIEN" Multiplicity="1" />
-          <End Role="PRATICIEN" Type="Self.PRATICIEN" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TYPE_PRATICIEN">
-              <PropertyRef Name="TYP_CODE" />
-            </Principal>
-            <Dependent Role="PRATICIEN">
-              <PropertyRef Name="TYP_CODE" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="RAPPORT_VISITE_FK00">
-          <End Role="PRATICIEN" Type="Self.PRATICIEN" Multiplicity="1" />
-          <End Role="RAPPORT_VISITE" Type="Self.RAPPORT_VISITE" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PRATICIEN">
-              <PropertyRef Name="PRA_NUM" />
-            </Principal>
-            <Dependent Role="RAPPORT_VISITE">
-              <PropertyRef Name="RAP_PRANUM" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="RAPPORT_VISITE_FK01">
-          <End Role="VISITEUR" Type="Self.VISITEUR" Multiplicity="1" />
-          <End Role="RAPPORT_VISITE" Type="Self.RAPPORT_VISITE" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="VISITEUR">
-              <PropertyRef Name="VIS_MATRICULE" />
-            </Principal>
-            <Dependent Role="RAPPORT_VISITE">
-              <PropertyRef Name="RAP_MATRICULE" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="RAPPORT_VISITE_FK02">
-          <End Role="MEDICAMENT" Type="Self.MEDICAMENT" Multiplicity="0..1" />
-          <End Role="RAPPORT_VISITE" Type="Self.RAPPORT_VISITE" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="MEDICAMENT">
-              <PropertyRef Name="MED_DEPOTLEGAL" />
-            </Principal>
-            <Dependent Role="RAPPORT_VISITE">
-              <PropertyRef Name="RAP_MED1" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="RAPPORT_VISITE_FK03">
-          <End Role="MEDICAMENT" Type="Self.MEDICAMENT" Multiplicity="0..1" />
-          <End Role="RAPPORT_VISITE" Type="Self.RAPPORT_VISITE" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="MEDICAMENT">
-              <PropertyRef Name="MED_DEPOTLEGAL" />
-            </Principal>
-            <Dependent Role="RAPPORT_VISITE">
-              <PropertyRef Name="RAP_MED2" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="RAPPORT_VISITE_FK04">
-          <End Role="MOTIF_VISITE" Type="Self.MOTIF_VISITE" Multiplicity="1" />
-          <End Role="RAPPORT_VISITE" Type="Self.RAPPORT_VISITE" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="MOTIF_VISITE">
-              <PropertyRef Name="MOT_CODE" />
-            </Principal>
-            <Dependent Role="RAPPORT_VISITE">
-              <PropertyRef Name="RAP_MOTIF" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="REGION_FK00">
-          <End Role="SECTEUR" Type="Self.SECTEUR" Multiplicity="1" />
-          <End Role="REGION" Type="Self.REGION" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="SECTEUR">
-              <PropertyRef Name="SEC_CODE" />
-            </Principal>
-            <Dependent Role="REGION">
-              <PropertyRef Name="SEC_CODE" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="TRAVAILLER_FK00">
-          <End Role="REGION" Type="Self.REGION" Multiplicity="1" />
-          <End Role="TRAVAILLER" Type="Self.TRAVAILLER" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="REGION">
-              <PropertyRef Name="REG_CODE" />
-            </Principal>
-            <Dependent Role="TRAVAILLER">
-              <PropertyRef Name="REG_CODE" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="TRAVAILLER_FK01">
-          <End Role="VISITEUR" Type="Self.VISITEUR" Multiplicity="1" />
-          <End Role="TRAVAILLER" Type="Self.TRAVAILLER" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="VISITEUR">
-              <PropertyRef Name="VIS_MATRICULE" />
-            </Principal>
-            <Dependent Role="TRAVAILLER">
-              <PropertyRef Name="VIS_MATRICULE" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="VISITEUR_FK01">
-          <End Role="SECTEUR" Type="Self.SECTEUR" Multiplicity="0..1" />
-          <End Role="VISITEUR" Type="Self.VISITEUR" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="SECTEUR">
-              <PropertyRef Name="SEC_CODE" />
-            </Principal>
-            <Dependent Role="VISITEUR">
-              <PropertyRef Name="SEC_CODE" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Function Name="addRapport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="pMat" Type="nvarchar" Mode="In" />
+          <Parameter Name="pMAT" Type="nvarchar" Mode="In" />
           <Parameter Name="pPranum" Type="smallint" Mode="In" />
           <Parameter Name="pDatVisit" Type="datetime" Mode="In" />
           <Parameter Name="pEtat" Type="nchar" Mode="In" />
@@ -360,11 +230,8 @@ avertissement 6002: La table/vue 'GSB_Visite.dbo.VAFFECTATION' n'a pas de clé p
           <Parameter Name="pMed1" Type="nvarchar" Mode="In" />
           <Parameter Name="pMed2" Type="nvarchar" Mode="In" />
         </Function>
-        <Function Name="getProfilVisiteur" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="pmat" Type="nvarchar" Mode="In" />
-        </Function>
         <Function Name="updRapport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="pMat" Type="nvarchar" Mode="In" />
+          <Parameter Name="pMAT" Type="nvarchar" Mode="In" />
           <Parameter Name="pNum" Type="int" Mode="In" />
           <Parameter Name="pPranum" Type="smallint" Mode="In" />
           <Parameter Name="pDatVisit" Type="datetime" Mode="In" />
@@ -379,88 +246,135 @@ avertissement 6002: La table/vue 'GSB_Visite.dbo.VAFFECTATION' n'a pas de clé p
           <Parameter Name="pMed2" Type="nvarchar" Mode="In" />
         </Function>
         <EntityContainer Name="GSB_VisiteModelStoreContainer">
-          <EntitySet Name="FAMILLE" EntityType="Self.FAMILLE" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="MEDICAMENT" EntityType="Self.MEDICAMENT" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="MOTIF_VISITE" EntityType="Self.MOTIF_VISITE" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="OFFRIR" EntityType="Self.OFFRIR" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="POSSEDER" EntityType="Self.POSSEDER" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="PRATICIEN" EntityType="Self.PRATICIEN" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="RAPPORT_VISITE" EntityType="Self.RAPPORT_VISITE" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="REGION" EntityType="Self.REGION" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="SECTEUR" EntityType="Self.SECTEUR" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="SPECIALITE" EntityType="Self.SPECIALITE" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TRAVAILLER" EntityType="Self.TRAVAILLER" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TYPE_PRATICIEN" EntityType="Self.TYPE_PRATICIEN" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="VISITEUR" EntityType="Self.VISITEUR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FAMILLE" EntityType="Self.FAMILLE" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[FAMILLE].[FAM_CODE] AS [FAM_CODE], 
+[FAMILLE].[FAM_LIBELLE] AS [FAM_LIBELLE]
+FROM [dbo].[FAMILLE] AS [FAMILLE]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="MEDICAMENT" EntityType="Self.MEDICAMENT" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[MEDICAMENT].[MED_DEPOTLEGAL] AS [MED_DEPOTLEGAL], 
+[MEDICAMENT].[MED_NOMCOMMERCIAL] AS [MED_NOMCOMMERCIAL], 
+[MEDICAMENT].[FAM_CODE] AS [FAM_CODE], 
+[MEDICAMENT].[MED_COMPOSITION] AS [MED_COMPOSITION], 
+[MEDICAMENT].[MED_EFFETS] AS [MED_EFFETS], 
+[MEDICAMENT].[MED_CONTREINDIC] AS [MED_CONTREINDIC], 
+[MEDICAMENT].[MED_PRIXECHANTILLON] AS [MED_PRIXECHANTILLON]
+FROM [dbo].[MEDICAMENT] AS [MEDICAMENT]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="MOTIF_VISITE" EntityType="Self.MOTIF_VISITE" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[MOTIF_VISITE].[MOT_CODE] AS [MOT_CODE], 
+[MOTIF_VISITE].[MOT_LIBEL] AS [MOT_LIBEL]
+FROM [dbo].[MOTIF_VISITE] AS [MOTIF_VISITE]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="OFFRIR" EntityType="Self.OFFRIR" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[OFFRIR].[VIS_MATRICULE] AS [VIS_MATRICULE], 
+[OFFRIR].[RAP_NUM] AS [RAP_NUM], 
+[OFFRIR].[MED_DEPOTLEGAL] AS [MED_DEPOTLEGAL], 
+[OFFRIR].[OFF_QTE] AS [OFF_QTE]
+FROM [dbo].[OFFRIR] AS [OFFRIR]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="POSSEDER" EntityType="Self.POSSEDER" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[POSSEDER].[PRA_NUM] AS [PRA_NUM], 
+[POSSEDER].[SPE_CODE] AS [SPE_CODE], 
+[POSSEDER].[POS_DIPLOME] AS [POS_DIPLOME], 
+[POSSEDER].[POS_COEFPRESCRIPTION] AS [POS_COEFPRESCRIPTION]
+FROM [dbo].[POSSEDER] AS [POSSEDER]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="PRATICIEN" EntityType="Self.PRATICIEN" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[PRATICIEN].[PRA_NUM] AS [PRA_NUM], 
+[PRATICIEN].[PRA_NOM] AS [PRA_NOM], 
+[PRATICIEN].[PRA_PRENOM] AS [PRA_PRENOM], 
+[PRATICIEN].[PRA_ADRESSE] AS [PRA_ADRESSE], 
+[PRATICIEN].[PRA_CP] AS [PRA_CP], 
+[PRATICIEN].[PRA_VILLE] AS [PRA_VILLE], 
+[PRATICIEN].[PRA_COEFNOTORIETE] AS [PRA_COEFNOTORIETE], 
+[PRATICIEN].[TYP_CODE] AS [TYP_CODE]
+FROM [dbo].[PRATICIEN] AS [PRATICIEN]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="RAPPORT_VISITE" EntityType="Self.RAPPORT_VISITE" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[RAPPORT_VISITE].[RAP_MATRICULE] AS [RAP_MATRICULE], 
+[RAPPORT_VISITE].[RAP_NUM] AS [RAP_NUM], 
+[RAPPORT_VISITE].[RAP_PRANUM] AS [RAP_PRANUM], 
+[RAPPORT_VISITE].[RAP_DATE] AS [RAP_DATE], 
+[RAPPORT_VISITE].[RAP_DATVISIT] AS [RAP_DATVISIT], 
+[RAPPORT_VISITE].[RAP_ETAT] AS [RAP_ETAT], 
+[RAPPORT_VISITE].[RAP_CONFIANCE] AS [RAP_CONFIANCE], 
+[RAPPORT_VISITE].[RAP_BILAN] AS [RAP_BILAN], 
+[RAPPORT_VISITE].[RAP_MOTIF] AS [RAP_MOTIF], 
+[RAPPORT_VISITE].[RAP_MOTIFAUTRE] AS [RAP_MOTIFAUTRE], 
+[RAPPORT_VISITE].[RAP_NOMREMPL] AS [RAP_NOMREMPL], 
+[RAPPORT_VISITE].[RAP_PNOMREMPL] AS [RAP_PNOMREMPL], 
+[RAPPORT_VISITE].[RAP_MED1] AS [RAP_MED1], 
+[RAPPORT_VISITE].[RAP_MED2] AS [RAP_MED2]
+FROM [dbo].[RAPPORT_VISITE] AS [RAPPORT_VISITE]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="REGION" EntityType="Self.REGION" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[REGION].[REG_CODE] AS [REG_CODE], 
+[REGION].[SEC_CODE] AS [SEC_CODE], 
+[REGION].[REG_NOM] AS [REG_NOM]
+FROM [dbo].[REGION] AS [REGION]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SECTEUR" EntityType="Self.SECTEUR" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[SECTEUR].[SEC_CODE] AS [SEC_CODE], 
+[SECTEUR].[SEC_LIBELLE] AS [SEC_LIBELLE]
+FROM [dbo].[SECTEUR] AS [SECTEUR]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SPECIALITE" EntityType="Self.SPECIALITE" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[SPECIALITE].[SPE_CODE] AS [SPE_CODE], 
+[SPECIALITE].[SPE_LIBELLE] AS [SPE_LIBELLE]
+FROM [dbo].[SPECIALITE] AS [SPECIALITE]</DefiningQuery>
+          </EntitySet>
+		  <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRAVAILLER" EntityType="Self.TRAVAILLER" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[TRAVAILLER].[VIS_MATRICULE] AS [VIS_MATRICULE], 
+[TRAVAILLER].[JJMMAA] AS [JJMMAA], 
+[TRAVAILLER].[REG_CODE] AS [REG_CODE], 
+[TRAVAILLER].[TRA_ROLE] AS [TRA_ROLE]
+FROM [dbo].[TRAVAILLER] AS [TRAVAILLER]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TYPE_PRATICIEN" EntityType="Self.TYPE_PRATICIEN" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[TYPE_PRATICIEN].[TYP_CODE] AS [TYP_CODE], 
+[TYPE_PRATICIEN].[TYP_LIBELLE] AS [TYP_LIBELLE], 
+[TYPE_PRATICIEN].[TYP_LIEU] AS [TYP_LIEU]
+FROM [dbo].[TYPE_PRATICIEN] AS [TYPE_PRATICIEN]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VISITEUR" EntityType="Self.VISITEUR" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[VISITEUR].[VIS_MATRICULE] AS [VIS_MATRICULE], 
+[VISITEUR].[VIS_NOM] AS [VIS_NOM], 
+[VISITEUR].[Vis_PRENOM] AS [Vis_PRENOM], 
+[VISITEUR].[VIS_ADRESSE] AS [VIS_ADRESSE], 
+[VISITEUR].[VIS_CP] AS [VIS_CP], 
+[VISITEUR].[VIS_VILLE] AS [VIS_VILLE], 
+[VISITEUR].[VIS_DATEEMBAUCHE] AS [VIS_DATEEMBAUCHE], 
+[VISITEUR].[SEC_CODE] AS [SEC_CODE], 
+[VISITEUR].[LAB_CODE] AS [LAB_CODE], 
+[VISITEUR].[vis_mdp] AS [vis_mdp]
+FROM [dbo].[VISITEUR] AS [VISITEUR]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="VAFFECTATION" EntityType="Self.VAFFECTATION" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
 [VAFFECTATION].[VIS_MATRICULE] AS [VIS_MATRICULE], 
 [VAFFECTATION].[JJMMAA] AS [JJMMAA], 
 [VAFFECTATION].[REG_CODE] AS [REG_CODE], 
-[VAFFECTATION].[TRA_ROLE] AS [TRA_ROLE]
+[VAFFECTATION].[TRA_ROLE] AS [TRA_ROLE], 
+[VAFFECTATION].[Vis_PRENOM] AS [Vis_PRENOM], 
+[VAFFECTATION].[VIS_NOM] AS [VIS_NOM], 
+[VAFFECTATION].[VIS_DATEEMBAUCHE] AS [VIS_DATEEMBAUCHE]
 FROM [dbo].[VAFFECTATION] AS [VAFFECTATION]</DefiningQuery>
           </EntitySet>
-          <AssociationSet Name="MEDICAMENT_FK00" Association="Self.MEDICAMENT_FK00">
-            <End Role="FAMILLE" EntitySet="FAMILLE" />
-            <End Role="MEDICAMENT" EntitySet="MEDICAMENT" />
-          </AssociationSet>
-          <AssociationSet Name="OFFRIR_FK00" Association="Self.OFFRIR_FK00">
-            <End Role="MEDICAMENT" EntitySet="MEDICAMENT" />
-            <End Role="OFFRIR" EntitySet="OFFRIR" />
-          </AssociationSet>
-          <AssociationSet Name="OFFRIR_FK01" Association="Self.OFFRIR_FK01">
-            <End Role="RAPPORT_VISITE" EntitySet="RAPPORT_VISITE" />
-            <End Role="OFFRIR" EntitySet="OFFRIR" />
-          </AssociationSet>
-          <AssociationSet Name="POSSEDER_FK00" Association="Self.POSSEDER_FK00">
-            <End Role="SPECIALITE" EntitySet="SPECIALITE" />
-            <End Role="POSSEDER" EntitySet="POSSEDER" />
-          </AssociationSet>
-          <AssociationSet Name="POSSEDER_FK01" Association="Self.POSSEDER_FK01">
-            <End Role="PRATICIEN" EntitySet="PRATICIEN" />
-            <End Role="POSSEDER" EntitySet="POSSEDER" />
-          </AssociationSet>
-          <AssociationSet Name="PRATICIEN_FK00" Association="Self.PRATICIEN_FK00">
-            <End Role="TYPE_PRATICIEN" EntitySet="TYPE_PRATICIEN" />
-            <End Role="PRATICIEN" EntitySet="PRATICIEN" />
-          </AssociationSet>
-          <AssociationSet Name="RAPPORT_VISITE_FK00" Association="Self.RAPPORT_VISITE_FK00">
-            <End Role="PRATICIEN" EntitySet="PRATICIEN" />
-            <End Role="RAPPORT_VISITE" EntitySet="RAPPORT_VISITE" />
-          </AssociationSet>
-          <AssociationSet Name="RAPPORT_VISITE_FK01" Association="Self.RAPPORT_VISITE_FK01">
-            <End Role="VISITEUR" EntitySet="VISITEUR" />
-            <End Role="RAPPORT_VISITE" EntitySet="RAPPORT_VISITE" />
-          </AssociationSet>
-          <AssociationSet Name="RAPPORT_VISITE_FK02" Association="Self.RAPPORT_VISITE_FK02">
-            <End Role="MEDICAMENT" EntitySet="MEDICAMENT" />
-            <End Role="RAPPORT_VISITE" EntitySet="RAPPORT_VISITE" />
-          </AssociationSet>
-          <AssociationSet Name="RAPPORT_VISITE_FK03" Association="Self.RAPPORT_VISITE_FK03">
-            <End Role="MEDICAMENT" EntitySet="MEDICAMENT" />
-            <End Role="RAPPORT_VISITE" EntitySet="RAPPORT_VISITE" />
-          </AssociationSet>
-          <AssociationSet Name="RAPPORT_VISITE_FK04" Association="Self.RAPPORT_VISITE_FK04">
-            <End Role="MOTIF_VISITE" EntitySet="MOTIF_VISITE" />
-            <End Role="RAPPORT_VISITE" EntitySet="RAPPORT_VISITE" />
-          </AssociationSet>
-          <AssociationSet Name="REGION_FK00" Association="Self.REGION_FK00">
-            <End Role="SECTEUR" EntitySet="SECTEUR" />
-            <End Role="REGION" EntitySet="REGION" />
-          </AssociationSet>
-          <AssociationSet Name="TRAVAILLER_FK00" Association="Self.TRAVAILLER_FK00">
-            <End Role="REGION" EntitySet="REGION" />
-            <End Role="TRAVAILLER" EntitySet="TRAVAILLER" />
-          </AssociationSet>
-          <AssociationSet Name="TRAVAILLER_FK01" Association="Self.TRAVAILLER_FK01">
-            <End Role="VISITEUR" EntitySet="VISITEUR" />
-            <End Role="TRAVAILLER" EntitySet="TRAVAILLER" />
-          </AssociationSet>
-          <AssociationSet Name="VISITEUR_FK01" Association="Self.VISITEUR_FK01">
-            <End Role="SECTEUR" EntitySet="SECTEUR" />
-            <End Role="VISITEUR" EntitySet="VISITEUR" />
-          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -688,7 +602,7 @@ FROM [dbo].[VAFFECTATION] AS [VAFFECTATION]</DefiningQuery>
           <Property Name="VIS_MATRICULE" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
           <Property Name="JJMMAA" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="REG_CODE" Type="String" Nullable="false" MaxLength="2" Unicode="true" FixedLength="false" />
-          <Property Name="TRA_ROLE" Type="String" MaxLength="11" Unicode="true" FixedLength="false" />
+          <Property Name="TRA_ROLE" Type="String" MaxLength="11" Unicode="true" FixedLength="false" Nullable="false" />
           <NavigationProperty Name="LaRegion" Relationship="GSB_VisiteModel.TRAVAILLER_FK00" FromRole="TRAVAILLER" ToRole="REGION" />
           <NavigationProperty Name="LeVisiteur" Relationship="GSB_VisiteModel.TRAVAILLER_FK01" FromRole="TRAVAILLER" ToRole="VISITEUR" />
         </EntityType>
@@ -706,15 +620,15 @@ FROM [dbo].[VAFFECTATION] AS [VAFFECTATION]</DefiningQuery>
             <PropertyRef Name="VIS_MATRICULE" />
           </Key>
           <Property Name="VIS_MATRICULE" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
-          <Property Name="VIS_NOM" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
-          <Property Name="Vis_PRENOM" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="VIS_ADRESSE" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="VIS_CP" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
-          <Property Name="VIS_VILLE" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
-          <Property Name="VIS_DATEEMBAUCHE" Type="DateTime" Precision="3" />
+          <Property Name="VIS_NOM" Type="String" MaxLength="25" Unicode="true" FixedLength="false" Nullable="false" />
+          <Property Name="Vis_PRENOM" Type="String" MaxLength="50" Unicode="true" FixedLength="false" Nullable="false" />
+          <Property Name="VIS_ADRESSE" Type="String" MaxLength="50" Unicode="true" FixedLength="false" Nullable="false" />
+          <Property Name="VIS_CP" Type="String" MaxLength="5" Unicode="true" FixedLength="false" Nullable="false" />
+          <Property Name="VIS_VILLE" Type="String" MaxLength="30" Unicode="true" FixedLength="false" Nullable="false" />
+          <Property Name="VIS_DATEEMBAUCHE" Type="DateTime" Precision="3" Nullable="false" />
           <Property Name="SEC_CODE" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
           <Property Name="LAB_CODE" Type="String" Nullable="false" MaxLength="2" Unicode="true" FixedLength="false" />
-          <Property Name="vis_mdp" Type="String" MaxLength="8" Unicode="false" FixedLength="true" />
+          <Property Name="vis_mdp" Type="String" MaxLength="8" Unicode="false" FixedLength="true" Nullable="false" />
           <NavigationProperty Name="LesRapports" Relationship="GSB_VisiteModel.RAPPORT_VISITE_FK01" FromRole="VISITEUR" ToRole="RAPPORT_VISITE" />
           <NavigationProperty Name="LeSecteur" Relationship="GSB_VisiteModel.VISITEUR_FK01" FromRole="VISITEUR" ToRole="SECTEUR" />
           <NavigationProperty Name="LesAffectations" Relationship="GSB_VisiteModel.TRAVAILLER_FK01" FromRole="VISITEUR" ToRole="TRAVAILLER" />
@@ -906,11 +820,17 @@ FROM [dbo].[VAFFECTATION] AS [VAFFECTATION]</DefiningQuery>
             <PropertyRef Name="VIS_MATRICULE" />
             <PropertyRef Name="JJMMAA" />
             <PropertyRef Name="REG_CODE" />
+            <PropertyRef Name="Vis_PRENOM" />
+            <PropertyRef Name="VIS_NOM" />
+            <PropertyRef Name="VIS_DATEEMBAUCHE" />
           </Key>
           <Property Type="String" Name="VIS_MATRICULE" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="JJMMAA" Nullable="false" Precision="3" />
           <Property Type="String" Name="REG_CODE" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="TRA_ROLE" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TRA_ROLE" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Vis_PRENOM" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VIS_NOM" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="VIS_DATEEMBAUCHE" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1003,6 +923,7 @@ FROM [dbo].[VAFFECTATION] AS [VAFFECTATION]</DefiningQuery>
             <EntityTypeMapping TypeName="GSB_VisiteModel.RAPPORT_VISITE">
               <ModificationFunctionMapping>
                 <InsertFunction FunctionName="GSB_VisiteModel.Store.addRapport" >
+                  <ScalarProperty Name="RAP_MATRICULE" ParameterName="pMAT" />
                   <ScalarProperty Name="RAP_MED2" ParameterName="pMed2" />
                   <ScalarProperty Name="RAP_MED1" ParameterName="pMed1" />
                   <ScalarProperty Name="RAP_PNOMREMPL" ParameterName="pPrenomR" />
@@ -1014,10 +935,10 @@ FROM [dbo].[VAFFECTATION] AS [VAFFECTATION]</DefiningQuery>
                   <ScalarProperty Name="RAP_ETAT" ParameterName="pEtat" />
                   <ScalarProperty Name="RAP_DATVISIT" ParameterName="pDatVisit" />
                   <ScalarProperty Name="RAP_PRANUM" ParameterName="pPranum" />
-                  <ScalarProperty Name="RAP_MATRICULE" ParameterName="pMat" />
                   <ResultBinding Name="RAP_NUM" ColumnName="pnum" />
                 </InsertFunction>
                 <UpdateFunction FunctionName="GSB_VisiteModel.Store.updRapport" >
+                  <ScalarProperty Name="RAP_MATRICULE" ParameterName="pMAT" Version="Current" />
                   <ScalarProperty Name="RAP_MED2" ParameterName="pMed2" Version="Current" />
                   <ScalarProperty Name="RAP_MED1" ParameterName="pMed1" Version="Current" />
                   <ScalarProperty Name="RAP_PNOMREMPL" ParameterName="pPrenomR" Version="Current" />
@@ -1030,7 +951,6 @@ FROM [dbo].[VAFFECTATION] AS [VAFFECTATION]</DefiningQuery>
                   <ScalarProperty Name="RAP_DATVISIT" ParameterName="pDatVisit" Version="Current" />
                   <ScalarProperty Name="RAP_PRANUM" ParameterName="pPranum" Version="Current" />
                   <ScalarProperty Name="RAP_NUM" ParameterName="pNum" Version="Current" />
-                  <ScalarProperty Name="RAP_MATRICULE" ParameterName="pMat" Version="Current" />
                 </UpdateFunction>
               </ModificationFunctionMapping>
             </EntityTypeMapping>
@@ -1060,7 +980,7 @@ FROM [dbo].[VAFFECTATION] AS [VAFFECTATION]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
+		   <EntitySetMapping Name="sysdiagrams">
             <EntityTypeMapping TypeName="GSB_VisiteModel.sysdiagram">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
@@ -1109,6 +1029,9 @@ FROM [dbo].[VAFFECTATION] AS [VAFFECTATION]</DefiningQuery>
           <EntitySetMapping Name="VAFFECTATION">
             <EntityTypeMapping TypeName="GSB_VisiteModel.VAFFECTATION">
               <MappingFragment StoreEntitySet="VAFFECTATION">
+                <ScalarProperty Name="VIS_DATEEMBAUCHE" ColumnName="VIS_DATEEMBAUCHE" />
+                <ScalarProperty Name="VIS_NOM" ColumnName="VIS_NOM" />
+                <ScalarProperty Name="Vis_PRENOM" ColumnName="Vis_PRENOM" />
                 <ScalarProperty Name="TRA_ROLE" ColumnName="TRA_ROLE" />
                 <ScalarProperty Name="REG_CODE" ColumnName="REG_CODE" />
                 <ScalarProperty Name="JJMMAA" ColumnName="JJMMAA" />

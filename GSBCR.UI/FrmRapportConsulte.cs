@@ -12,11 +12,11 @@ using GSBCR.BLL;
 
 namespace GSBCR.UI
 {
-    public partial class FrmRapportEnCours : Form
+    public partial class FrmRapportConsulte : Form
     {
         private VISITEUR leVisiteur;
         private VAFFECTATION vaff;
-        public FrmRapportEnCours(VISITEUR v, List<RAPPORT_VISITE> lr)
+        public FrmRapportConsulte(VISITEUR v, List<RAPPORT_VISITE> lr)
         {
             InitializeComponent();
             leVisiteur = v;
@@ -26,7 +26,7 @@ namespace GSBCR.UI
             dgvRapportEnCours.DataSource = bsRapportEnCours;
         }
 
-        public FrmRapportEnCours(VAFFECTATION v, List<RAPPORT_VISITE> lr)
+        public FrmRapportConsulte(VAFFECTATION v, List<RAPPORT_VISITE> lr)
         {
             InitializeComponent();
             vaff = v;
@@ -56,22 +56,6 @@ namespace GSBCR.UI
             {
                 bsRapportEnCours.ResetCurrentItem();
             }
-        }
-
-        private void btnNouveau_Click(object sender, EventArgs e)
-        {
-            RAPPORT_VISITE r = new RAPPORT_VISITE();
-            r.RAP_MATRICULE = leVisiteur.VIS_MATRICULE;
-            FrmSaisir f = new FrmSaisir(r, true);
-            if (f.ShowDialog() == DialogResult.OK)
-            {
-                bsRapportEnCours.Add(r);
-            }
-        }
-
-        private void dgvRapportEnCours_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

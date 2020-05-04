@@ -18,5 +18,8 @@ namespace GSBCR.modele
         public System.DateTime JJMMAA { get; set; }
         public string REG_CODE { get; set; }
         public string TRA_ROLE { get; set; }
+        public string Vis_PRENOM { get; set; }
+        public string VIS_NOM { get; set; }
+        public System.DateTime VIS_DATEEMBAUCHE { get; set; }
     }
 }
