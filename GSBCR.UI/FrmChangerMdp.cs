@@ -31,6 +31,7 @@ namespace GSBCR.UI
             string confirm = tbxConfirm.Text;
             // Visiteur
             VISITEUR verif = VisiteurManager.ChargerVisiteur(leVisiteur.VIS_MATRICULE, ancien);
+            //On vérifie que l'ancien mdp est correcte
             if (leVisiteur == null)
             {
                 MessageBox.Show("Ancien mot de passe incorrect", "Données incorrectes pour le nouveau mot de passe", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -38,12 +39,16 @@ namespace GSBCR.UI
             }
             else
             {
+                //On vérifie qu'aucun champ soit vide
                 if (ancien != "" && nouveau != "" && confirm != "")
                 {
+                    //On regarde si le nouveau mdp est différent de l'ancien
                     if (ancien != nouveau)
                     {
+                        //On vérifie si le nouveau mdp est le même que celui rentré dans "confirmé"
                         if (nouveau == confirm)
                         {
+                            //On regarde si le mot de passe à au minimum
                             if (nouveau.Length >= 8) {
                                 if (ValidMDP(nouveau) == true)
                                 {
@@ -90,6 +95,11 @@ namespace GSBCR.UI
             this.Close();
         }
 
+        /// <summary>
+        /// Fonction qui va voir si le mot de passe est conforme, si oui, le mot de pase va être modifié
+        /// </summary>
+        /// <param name="mdp"></param>
+        /// <returns>True si le mdp est conforme, False si il ne l'est pas</returns>
         private bool ValidMDP(string mdp)
         {
             if (mdp.Any(char.IsUpper) && mdp.Any(char.IsLower) && mdp.Any(char.IsDigit))

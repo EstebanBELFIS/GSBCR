@@ -32,8 +32,10 @@ namespace GSBCR.UI
             string Adresse = tbxAdresse.Text;
             string CP = tbxCP.Text;
             string Ville = tbxVille.Text;
+            //On vérifie que les champs ne sont pas vides
             if (Adresse != "" && CP != "" && Ville != "")
             {
+                //On regarde si les données sont conformes
                 if (Ville.All(char.IsLetter) && CP.All(char.IsDigit) && CP.Length == 5)
                 {
                     leVisiteur.VIS_ADRESSE = Adresse;
